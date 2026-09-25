@@ -343,11 +343,11 @@
   <div class="nav-inner">
     <a class="brand" href="#top">AXIA ANALYTICS</a>
     <ul class="nav-links">
+      <li><a href="#about">About</a></li>
       <li><a href="#capabilities">Solutions</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#work">Our Work</a></li>
       <li><a href="#insights">Insights</a></li>
-      <li><a href="#about">About</a></li>
     </ul>
     <a class="btn btn-primary nav-cta" href="#contact">Start a Conversation <span class="arrow">→</span></a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -356,11 +356,11 @@
   </div>
 </header>
 <nav id="mobile-menu" aria-label="Mobile">
+  <a href="#about">About</a>
   <a href="#capabilities">Solutions</a>
   <a href="#industries">Industries</a>
   <a href="#work">Our Work</a>
   <a href="#insights">Insights</a>
-  <a href="#about">About</a>
   <a href="#contact">Start a Conversation →</a>
 </nav>
 
@@ -994,6 +994,75 @@
       </div>
     </div>
   </section>
+
+  <!-- ENGAGEMENT MODELS / PRICING -->
+  <section class="section-dark" id="pricing">
+    <div class="wrap">
+      <div class="reveal" style="margin-bottom:8px;">
+        <div class="eyebrow">Engagement Models</div>
+        <h2 style="font-size:clamp(26px,3.6vw,44px);margin-top:16px;max-width:20ch;">Engagement models, not one-size packages.</h2>
+        <p class="muted" style="margin-top:18px;max-width:56ch;font-size:17px;">Every engagement starts with your actual problem, not a template. These are the three shapes most Axia work takes — pricing is scoped after a discovery call.</p>
+      </div>
+
+      <div class="pricing-grid reveal">
+
+        <div class="price-card">
+          <h3 class="price-card-name">Foundational</h3>
+          <p class="price-card-desc">For teams testing whether AI is worth pursuing before committing budget.</p>
+          <div class="price-card-amount">KES 50,000 <span>/ 4–6 wks</span></div>
+          <ul class="price-card-features">
+            <li>Data readiness audit</li>
+            <li>One scoped use case identified</li>
+            <li>Feasibility &amp; ROI estimate</li>
+            <li>Go/no-go recommendation</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contact" style="width:100%;justify-content:center;">Start here</a>
+        </div>
+
+        <div class="price-card price-card-featured">
+          <p class="price-card-badge">Most requested</p>
+          <h3 class="price-card-name">Growth</h3>
+          <p class="price-card-desc">For teams ready to build and deploy one working solution end-to-end.</p>
+          <div class="price-card-amount">KES 200,000 <span>/ 8–12 wks</span></div>
+          <ul class="price-card-features">
+            <li>Everything in Foundational</li>
+            <li>Working pilot, deployed to production</li>
+            <li>Team training &amp; handoff runbook</li>
+            <li>30-day post-launch support</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact" style="width:100%;justify-content:center;">Talk to us</a>
+        </div>
+
+        <div class="price-card">
+          <h3 class="price-card-name">Enterprise</h3>
+          <p class="price-card-desc">For organisations scaling AI across multiple teams or business units.</p>
+          <div class="price-card-amount">Scoped <span>/ ongoing</span></div>
+          <ul class="price-card-features">
+            <li>Everything in Growth</li>
+            <li>Multi-team rollout &amp; governance</li>
+            <li>Dedicated delivery lead</li>
+            <li>Quarterly performance review</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contact" style="width:100%;justify-content:center;">Talk to us</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <style>
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
+    @media (max-width:900px){ .pricing-grid{grid-template-columns:1fr;} }
+    .price-card{background:var(--forest);border:1px solid var(--border-dark);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column;position:relative;}
+    .price-card-featured{background:var(--dark);border:1px solid var(--accent);}
+    .price-card-badge{position:absolute;top:-13px;left:28px;background:var(--accent);color:var(--dark);font-family:var(--font-head);font-size:11px;font-weight:700;padding:5px 12px;border-radius:100px;margin:0;}
+    .price-card-name{font-family:var(--font-head);font-weight:700;font-size:19px;color:var(--on-dark);margin-bottom:6px;}
+    .price-card-desc{font-size:13.5px;color:var(--on-dark-muted);line-height:1.55;margin-bottom:22px;min-height:42px;}
+    .price-card-amount{font-family:var(--font-head);font-weight:800;font-size:24px;color:var(--accent);margin-bottom:26px;}
+    .price-card-amount span{font-size:12px;color:var(--on-dark-muted);font-weight:400;font-family:var(--font-body);}
+    .price-card-features{list-style:none;padding:0;margin:0 0 28px;flex-grow:1;}
+    .price-card-features li{font-size:14px;color:var(--on-dark);padding:10px 0;border-top:1px solid var(--border-dark);}
+    .price-card-features li:first-child{border-top:none;}
+  </style>
 
   <!-- CONTACT -->
   <section id="contact">
