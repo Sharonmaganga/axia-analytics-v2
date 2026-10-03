@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI for Beginners: Lesson Summary | Axia Analytics</title>
+<meta name="description" content="A plain-English summary of AI for Beginners by Sharon Maganga: what AI is, the types of AI, AI models, AI and data, practical uses, and the jargon decoded.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --off-white: #F5F3EE;
+    --black: #0B0B0B;
+    --slate: #2F4F4F;
+    --slate-dark: #1C3333;
+    --green: #3DDC84;
+    --green-dark: #1E9E57;
+    --ink: #1A1F1F;
+    --muted: #4F5B5B;
+    --rule: #DAD6CC;
+    --card: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--off-white);
+    color: var(--ink);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    background: radial-gradient(circle at 20% 30%, #3A6363 0%, var(--slate) 50%, var(--slate-dark) 100%);
+    color: var(--off-white);
+    padding: 56px 0 48px;
+  }
+  .kicker {
+    display: inline-block;
+    background: var(--green);
+    color: var(--black);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+  h1 { font-size: clamp(36px, 7vw, 60px); line-height: 1.02; margin: 18px 0 14px; font-weight: 800; }
+  h1 span { color: var(--green); }
+  .lede { font-size: 18px; max-width: 620px; margin: 0; opacity: 0.92; }
+  .byline { margin-top: 22px; font-size: 14px; opacity: 0.85; }
+  .byline strong { color: var(--green); }
+
+  main { padding: 40px 0 24px; }
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+  }
+  .toc h2 { font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; margin: 0 0 8px; color: var(--muted); }
+  .toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 32px; }
+  .toc li { font-weight: 700; break-inside: avoid; }
+  .toc a { color: var(--ink); text-decoration: none; }
+  .toc a:hover { color: var(--green-dark); }
+
+  section { margin: 0 0 34px; }
+  section h2, h3 { break-after: avoid; }
+  .card, .example, .warn, table, tr { break-inside: avoid; }
+  section h2 {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 26px; line-height: 1.2; margin: 0 0 12px; font-weight: 800;
+  }
+  section h2 .num {
+    flex: none;
+    font-size: 14px; color: var(--black); background: var(--green);
+    border-radius: 999px; padding: 3px 11px; letter-spacing: 1px;
+  }
+  h3 { font-size: 17px; margin: 18px 0 6px; font-weight: 800; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 800; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 10px 0 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-left: 6px solid var(--green);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .card h4 { margin: 0 0 4px; font-size: 16px; font-weight: 800; }
+  .card p { margin: 0; font-size: 15px; color: var(--muted); }
+
+  .example {
+    background: #E8EEEC;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+  .example .label { font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--slate); }
+
+  .warn {
+    background: var(--black);
+    color: var(--off-white);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+  .warn strong { color: var(--green); }
+
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; background: var(--card); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; font-size: 15px; }
+  th { background: var(--slate); color: var(--off-white); font-weight: 800; }
+  tr:last-child td { border-bottom: none; }
+  td:first-child { font-weight: 800; white-space: nowrap; }
+
+  .cta {
+    background: radial-gradient(circle at 80% 20%, #3A6363 0%, var(--slate) 55%, var(--slate-dark) 100%);
+    color: var(--off-white);
+    border-radius: 18px;
+    padding: 30px 28px;
+    margin: 40px 0 10px;
+    break-inside: avoid;
+  }
+  .cta h2 { margin: 0 0 8px; font-size: 28px; font-weight: 800; }
+  .cta p { opacity: 0.92; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 800;
+    padding: 12px 22px; border-radius: 999px; font-size: 16px;
+  }
+  .btn.primary { background: var(--green); color: var(--black); }
+  .btn.secondary { border: 2px solid var(--off-white); color: var(--off-white); }
+
+  footer { padding: 24px 0 48px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--slate); font-weight: 700; }
+
+  @media (max-width: 560px) {
+    .toc ol { columns: 1; }
+    td:first-child { white-space: normal; }
+  }
+
+  @page { size: A4; margin: 14mm 0; }
+  @media print {
+    body { font-size: 11.5pt; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    header.hero { padding: 34px 0 30px; }
+    .wrap { max-width: none; padding: 0 16mm; }
+    main { padding-top: 24px; }
+    section h2 { font-size: 20pt; }
+    .cta { margin-top: 20px; }
+    a[href^="http"]::after { content: ""; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Free lesson summary</span>
+    <h1>AI… <span>simply explained</span></h1>
+    <p class="lede">You probably used AI more than ten times before breakfast: your spam filter, your phone’s face unlock, the videos recommended to you. This guide explains what AI actually is, in plain English.</p>
+    <p class="byline">By <strong>Sharon Maganga</strong>, AI Corporate Trainer · Axia Analytics</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <nav class="toc" aria-label="Contents">
+    <h2>What you’ll learn</h2>
+    <ol>
+      <li><a href="#what-is-ai">What is AI?</a></li>
+      <li><a href="#types">The types of AI</a></li>
+      <li><a href="#models">AI models</a></li>
+      <li><a href="#data">AI and data</a></li>
+      <li><a href="#uses">Practical uses of AI</a></li>
+      <li><a href="#jargon">AI jargon, decoded</a></li>
+    </ol>
+  </nav>
+
+  <section id="what-is-ai">
+    <h2><span class="num">01</span> What is AI?</h2>
+    <p><strong>Artificial</strong> because it isn’t human: it runs on computers. <strong>Intelligent</strong> because it can do four things:</p>
+    <div class="grid">
+      <div class="card"><h4>1. Learn</h4><p>Pick up patterns from examples and data.</p></div>
+      <div class="card"><h4>2. Reason</h4><p>Work through information logically.</p></div>
+      <div class="card"><h4>3. Solve problems</h4><p>Find answers to new questions.</p></div>
+      <div class="card"><h4>4. Make decisions</h4><p>Choose what to do next based on what it learned.</p></div>
+    </div>
+    <div class="example">
+      <div class="label">Example: Wanjiku’s bakery</div>
+      <p>Wanjiku opened a bakery in January. Sales peaked in February (Valentine’s), were quiet in March, rose in August (wedding season), and picked up again in December (holidays, weddings and graduations).</p>
+      <p>Next year she won’t guess. She’ll look at last year’s sales and stock up before February, August and December. <strong>That is what AI does:</strong> it looks at past data, learns the patterns, and makes decisions.</p>
+      <p>The difference? Wanjiku has one year of sales data. AI has been exposed to enormous amounts of data, so it can spot far more patterns.</p>
+    </div>
+    <p><strong>In one sentence:</strong> artificial intelligence is computer software that has been exposed to data and has learned patterns from it.</p>
+  </section>
+
+  <section id="types">
+    <h2><span class="num">02</span> The types of AI</h2>
+    <p>AI can be grouped in two ways: by what it can do (<em>functionality</em>) and by what it produces (<em>output</em>).</p>
+    <h3>By functionality</h3>
+    <table>
+      <tr><th>Type</th><th>What it means</th><th>Where we are</th></tr>
+      <tr><td>Narrow AI</td><td>Good at one specific task: writing an email, recommending a song, translating English to Kiswahili.</td><td>This is the AI most of us use today.</td></tr>
+      <tr><td>General AI (AGI)</td><td>AI that can reason, think and adapt like a human across many different areas.</td><td>Not there yet, but early versions are appearing.</td></tr>
+      <tr><td>Super AI</td><td>AI that is more intelligent than humans.</td><td>Still theoretical: the AI of movies.</td></tr>
+    </table>
+    <h3>By output</h3>
+    <div class="grid">
+      <div class="card"><h4>Predictive AI</h4><p>Good at guessing what happens next, like a weather forecast or a sales prediction.</p></div>
+      <div class="card"><h4>Generative AI</h4><p>Creates new things: text, images, videos and songs. Most of us use this every day.</p></div>
+    </div>
+  </section>
+
+  <section id="models">
+    <h2><span class="num">03</span> AI models</h2>
+    <p>Think of a model as a <strong>student</strong>. Students go to different schools (village, town, abroad) and study similar subjects with different teachers and resources. Each one learns slightly differently.</p>
+    <p>AI models are the same. ChatGPT, Claude, Gemini, Grok and Copilot each went through <strong>training</strong>, a period of learning. When you ask a model a question, it <strong>infers</strong> an answer from what it learned, just as you answer from what you learned in school.</p>
+    <p>When a company releases a new model, it is like that student completing a master’s degree: they come back with more knowledge.</p>
+    <div class="warn">
+      <p><strong>Watch out for hallucination.</strong> If someone asked you about Pythagoras’ theorem today, you might half-remember it and confidently give a wrong answer. AI models do the same. That is called hallucination.</p>
+      <p style="margin:0"><strong>What to do:</strong> always fact-check AI answers, ask it to iterate, and compare a few variations before you rely on the output.</p>
+    </div>
+  </section>
+
+  <section id="data">
+    <h2><span class="num">04</span> AI and data</h2>
+    <p>Think of a <strong>DJ</strong>. To perform, a DJ needs three things, and so does AI:</p>
+    <table>
+      <tr><th>A DJ needs…</th><th>AI needs…</th></tr>
+      <tr><td>Music tracks</td><td><strong>Data</strong>: text, images and video to learn from.</td></tr>
+      <tr><td>A mixer</td><td>An <strong>algorithm</strong> that processes the data.</td></tr>
+      <tr><td>An audience</td><td><strong>You</strong>, the user.</td></tr>
+    </table>
+    <p>Both the <strong>quantity</strong> and the <strong>quality</strong> of the data matter. Because AI depends on data, watch for four issues:</p>
+    <ul>
+      <li><strong>Bias:</strong> a DJ who only listens to gospel can’t play an amapiano concert. AI trained on narrow data gives narrow, biased answers.</li>
+      <li><strong>Garbage in, garbage out:</strong> a DJ who knows three songs shouldn’t headline a concert. Poor data means poor results.</li>
+      <li><strong>Prompting:</strong> “play at a gospel show” gets a generic set. “Play a gospel show for 25 to 30 year-olds” gets the right one. The more context you give AI, the better the answer.</li>
+      <li><strong>Data privacy:</strong> anything you paste in could shape what the model says to others.</li>
+    </ul>
+    <div class="warn">
+      <p><strong>Data privacy example:</strong> you ask AI to draft a thank-you email to Kevin, your best client, who buys 20 pairs of shoes a month and always pays on time. Later, someone else asks the AI to find a client who buys more than five pairs a month. Who might it point them to? Kevin.</p>
+      <p style="margin:0"><strong>Before you paste anything into AI, ask:</strong> could this data hurt my company or cost us a client?</p>
+    </div>
+  </section>
+
+  <section id="uses">
+    <h2><span class="num">05</span> Practical uses of AI</h2>
+    <div class="grid">
+      <div class="card"><h4>Grow your business</h4><p>Describe what you sell and to whom. Ask for a social media content strategy, ideas for approaching clients, and pricing ideas.</p></div>
+      <div class="card"><h4>Plan your health goals</h4><p>Share your current and ideal weight and your work schedule. Ask for practical meal plans that fit your day.</p></div>
+      <div class="card"><h4>Learn anything</h4><p>Ask AI to teach you a topic step by step, such as how money market funds (MMFs) work and how to invest in them.</p></div>
+    </div>
+  </section>
+
+  <section id="jargon">
+    <h2><span class="num">06</span> AI jargon, decoded</h2>
+    <table>
+      <tr><th>Term</th><th>Plain-English meaning</th></tr>
+      <tr><td>LLM</td><td><strong>Large Language Model.</strong> AI trained on huge amounts of text. ChatGPT and Claude run on LLMs.</td></tr>
+      <tr><td>AI agent</td><td>Goes beyond a chatbot. A chatbot suggests places to stay in Mombasa. An agent also checks bookings and flight prices, advises on the best time to go, and books the flight, like an employee who does the task from start to finish.</td></tr>
+      <tr><td>Prompt</td><td>How you talk to AI. The more descriptive you are, the better the answer.</td></tr>
+      <tr><td>MCP</td><td><strong>Model Context Protocol.</strong> Like a universal charger with a cable for your phone, earphones and laptop, it lets AI connect to many tools at once, such as your Gmail and calendar.</td></tr>
+    </table>
+  </section>
+
+  <aside class="cta">
+    <h2>Want your team to use AI confidently?</h2>
+    <p>Sharon Maganga runs practical, plain-English AI training for companies and teams: from AI basics to safe, productive use at work.</p>
+    <div class="buttons">
+      <a class="btn primary" href="https://axiaanalytics.com">Book AI training at axiaanalytics.com</a>
+      <a class="btn secondary" href="https://youtu.be/50RQ1XQgbjU">Watch the full video</a>
+    </div>
+  </aside>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    © Axia Analytics · <a href="https://axiaanalytics.com">axiaanalytics.com</a> · Share this guide with someone who’s new to AI.
+  </div>
+</footer>
+
+</body>
+</html>
