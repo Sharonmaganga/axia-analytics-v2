@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Free guides, tools and videos on AI, automation and data for African organisations, from Axia Analytics.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://axiaanalytics.com/resources.html">
+<meta name="theme-color" content="#0B2F28">
+<meta property="og:title" content="Resources | Axia Analytics">
+<meta property="og:description" content="Free guides, tools and videos on AI, automation and data for African organisations.">
+<meta property="og:image" content="https://axiaanalytics.com/og-image.jpg">
+<title>Resources | Axia Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: the site's own system (tokens copied from index.html / ai-readiness.html). Light page, forest and dark bands, eyebrow labels "01 / Section". */
+:root {
+  --bg: #F5F6F1;
+  --surface: #FFFFFF;
+  --dark: #07110F;
+  --forest: #0B2F28;
+  --accent: #B8F35A;
+  --teal: #4FA89A;
+  --teal-ink: #336D64;
+  --text: #101816;
+  --muted: #66736E;
+  --border: rgba(16,24,22,.13);
+  --border-dark: rgba(245,246,241,.14);
+  --on-dark: #F5F6F1;
+  --on-dark-muted: #93A39C;
+  --chip: #EAEDE4;
+  --ph-bg: #FFE9A8;
+  --ph-ink: #5A4300;
+  --font-head: 'Manrope', -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+  --r: 12px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { font-family: var(--font-head); font-weight: 700; margin: 0; letter-spacing: -.01em; text-wrap: balance; line-height: 1.2; }
+a { color: inherit; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 40px; }
+@media (max-width: 720px) { .wrap { padding-inline: 22px; } }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } html { scroll-behavior: auto; } }
+
+.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 600; font-size: 15px; padding: 13px 22px; border-radius: 10px; border: 1px solid transparent; cursor: pointer; text-decoration: none; transition: transform .18s ease, background .18s ease; }
+.btn-primary { background: var(--accent); color: var(--dark); }
+.btn-primary:hover { background: #c7f77c; }
+.btn-line { background: var(--surface); color: var(--text); border-color: var(--border); }
+.btn-line:hover { border-color: var(--teal); }
+.btn-ghost { background: transparent; color: var(--on-dark); border-color: var(--border-dark); }
+.btn-ghost:hover { border-color: var(--on-dark-muted); }
+.btn-plain { background: none; color: var(--muted); }
+
+/* Header: same as the site nav */
+header.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 100; background: var(--bg); border-bottom: 1px solid var(--border); }
+.nav-inner { max-width: 1240px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; position: relative; }
+@media (max-width: 720px) { .nav-inner { padding: 16px 22px; } }
+.brand { font-family: var(--font-head); font-weight: 800; font-size: 15px; letter-spacing: .04em; text-decoration: none; color: var(--text); }
+.nav-links { list-style: none; display: flex; gap: 28px; margin: 0; padding: 0; }
+.nav-links a { font-family: var(--font-head); font-size: 14.5px; font-weight: 600; text-decoration: none; color: var(--text); }
+.nav-links a[aria-current="page"] { color: var(--teal-ink); }
+.nav-cta { white-space: nowrap; }
+.nav-toggle { display: none; background: none; border: 0; font: 600 14.5px var(--font-head); color: var(--text); cursor: pointer; padding: 6px; }
+#mobile-menu { display: none; }
+@media (max-width: 900px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-toggle { display: block; }
+  #mobile-menu.open { display: grid; background: var(--bg); border-bottom: 1px solid var(--border); padding: 8px 22px 20px; }
+  #mobile-menu a { font-family: var(--font-head); font-size: 20px; font-weight: 700; text-decoration: none; color: var(--text); padding: 12px 0; border-bottom: 1px solid var(--border); }
+  #mobile-menu a:last-child { border-bottom: 0; }
+}
+
+/* Section scaffolding */
+.band { padding-block: 72px; }
+.eyebrow { font-family: var(--font-body); font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-ink); margin-bottom: 16px; }
+.section-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+.section-head h2 { font-size: clamp(26px, 3.4vw, 40px); }
+.section-head p { color: var(--muted); margin: 12px 0 0; max-width: 56ch; }
+.arrow-link { font-family: var(--font-head); font-weight: 700; font-size: 15px; text-decoration: none; display: inline-flex; gap: 6px; color: var(--teal-ink); }
+.arrow-link::after { content: "→"; transition: transform .2s; }
+.arrow-link:hover::after { transform: translateX(3px); }
+
+/* 01 Hero */
+.hero { padding-block: 72px 48px; border-bottom: 1px solid var(--border); }
+.hero h1 { font-size: clamp(40px, 6vw, 72px); font-weight: 800; letter-spacing: -.02em; line-height: 1.05; }
+.hero p { color: var(--muted); font-size: 19px; max-width: 56ch; margin: 18px 0 30px; }
+.hero-row { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
+.search { flex: 1 1 280px; min-width: 0; max-width: 620px; display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 4px 16px; }
+.search input { flex: 1; min-width: 0; border: 0; background: none; font: 400 16px var(--font-body); color: var(--text); padding: 11px 0; outline: none; }
+.search:focus-within { border-color: var(--teal); }
+.search svg { flex: none; color: var(--muted); }
+
+/* Thumbnails (placeholder art until real images exist) */
+.thumb { position: relative; aspect-ratio: 16/9; max-width: 100%; border-radius: var(--r); overflow: hidden; background: radial-gradient(120% 90% at 85% 10%, #1D5246, var(--forest) 55%, var(--dark)); color: var(--on-dark); display: flex; align-items: flex-end; padding: 14px; }
+.thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.thumb .glyph { font: 600 12px/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); position: relative; }
+.thumb .play { position: absolute; inset: 0; margin: auto; width: 58px; height: 58px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; color: var(--dark); }
+.thumb .dur { position: absolute; right: 10px; bottom: 10px; background: rgba(7,17,15,.75); color: var(--on-dark); font: 500 12px/1 var(--font-body); padding: 4px 6px; border-radius: 4px; }
+.ph { display: inline-block; font: 600 10.5px/1 var(--font-body); letter-spacing: .08em; text-transform: uppercase; color: var(--ph-ink); background: var(--ph-bg); padding: 4px 6px; border-radius: 4px; }
+
+/* Cards */
+.card { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--text); min-width: 0; }
+.card .meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--muted); }
+.fmt { font: 600 11.5px/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--teal-ink); }
+.tag { font-size: 12.5px; background: var(--chip); padding: 4px 9px; border-radius: 999px; color: var(--text); }
+.card h3 { font-size: 19px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.card:hover h3 { text-decoration: underline; text-decoration-color: var(--teal); text-underline-offset: 4px; }
+.card .foot { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: auto; }
+
+/* 02 Featured */
+.featured { display: grid; grid-template-columns: 1.7fr 1fr; gap: 32px; }
+.featured .side { display: grid; gap: 28px; align-content: start; }
+.featured .big h3 { font-size: clamp(22px, 2.4vw, 30px); }
+.featured .side .card { display: grid; grid-template-columns: 170px minmax(0, 1fr); column-gap: 18px; row-gap: 8px; align-content: start; }
+.featured .side .card > * { grid-column: 2; }
+.featured .side .card > .thumb { grid-column: 1; grid-row: 1 / span 5; aspect-ratio: 4/3; }
+@media (max-width: 820px) { .featured { grid-template-columns: 1fr; } .featured .side .card { grid-template-columns: 120px minmax(0, 1fr); } }
+
+/* 03 Downloads (forest band) */
+.dark { background: var(--forest); color: var(--on-dark); }
+.dark .eyebrow { color: var(--accent); }
+.dark .section-head p { color: var(--on-dark-muted); }
+.dark .arrow-link { color: var(--accent); }
+.dl-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.dl { position: relative; overflow: hidden; background: rgba(245,246,241,.04); border: 1px solid var(--border-dark); border-radius: var(--r); padding: 24px; display: flex; flex-direction: column; gap: 12px; color: var(--on-dark); }
+.dl::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
+.dl .doc { width: 50px; height: 64px; border-radius: 4px 14px 4px 4px; background: var(--on-dark); color: var(--forest); display: grid; place-items: end start; padding: 6px; font: 700 10px/1 var(--font-body); letter-spacing: .06em; }
+.dl .fmt { color: var(--accent); }
+.dl h3 { font-size: 18px; }
+.dl p { margin: 0; color: var(--on-dark-muted); font-size: 14.5px; }
+.dl .btn { margin-top: auto; align-self: flex-start; }
+@media (max-width: 1000px) {
+  .dl-row { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(250px, 78%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .dl { scroll-snap-align: start; }
+}
+
+/* 04 Library */
+.filters { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 70px); z-index: 20; background: var(--bg); padding-block: 14px; border-bottom: 1px solid var(--border); margin-bottom: 28px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.tabs { display: flex; min-width: 0; gap: 4px; background: var(--chip); padding: 4px; border-radius: 10px; overflow-x: auto; max-width: 100%; }
+.tabs button { border: 0; background: none; color: var(--muted); font: 600 14px var(--font-head); padding: 8px 14px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+.tabs button[aria-selected="true"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 2px rgba(16,24,22,.12); }
+.selects { margin-left: auto; display: flex; gap: 10px; flex-wrap: wrap; }
+.selects label { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+select { font: 500 14px var(--font-body); color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { border: 1px solid var(--border); background: var(--surface); color: var(--text); font: 500 13.5px var(--font-body); padding: 6px 12px; border-radius: 999px; cursor: pointer; }
+.chip:hover { border-color: var(--teal); }
+.chip[aria-pressed="true"] { background: var(--forest); color: var(--on-dark); border-color: var(--forest); }
+.filter-btn { display: none; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 28px; margin-top: 16px; }
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .grid { grid-template-columns: 1fr; } }
+.more { display: flex; justify-content: center; margin-top: 44px; }
+.empty { text-align: center; padding: 48px 0; color: var(--muted); }
+.empty button { background: none; border: 0; color: var(--teal-ink); text-decoration: underline; cursor: pointer; font: 600 15px var(--font-body); }
+.count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+@media (max-width: 720px) {
+  .filter-btn { display: inline-flex; margin-left: auto; padding: 9px 14px; }
+  .sheet { display: none; }
+  .sheet.open { display: grid; gap: 16px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 120; background: var(--surface); border-radius: 18px 18px 0 0; padding: 22px 22px calc(22px + env(safe-area-inset-bottom, 0px)); box-shadow: 0 -10px 40px rgba(7,17,15,.25); max-height: 80vh; overflow-y: auto; }
+  .selects { margin-left: 0; }
+  .sheet-close { display: inline-flex !important; justify-self: end; }
+}
+.sheet-close { display: none !important; }
+
+/* 05 Shorts */
+.shorts { display: grid; grid-auto-flow: column; grid-auto-columns: 200px; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; }
+.short { scroll-snap-align: start; text-decoration: none; color: var(--text); display: grid; gap: 10px; align-content: start; }
+.short .thumb { aspect-ratio: 9/16; align-items: flex-start; flex-direction: column; justify-content: space-between; }
+.short .plat { display: inline-flex; gap: 6px; align-items: center; font: 600 12px var(--font-body); background: rgba(7,17,15,.55); padding: 5px 9px; border-radius: 999px; color: var(--on-dark); position: relative; }
+.short p { margin: 0; font-size: 14px; line-height: 1.45; }
+.follow { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+
+/* 06 Signup */
+.signup { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 40px; }
+.signup h2 { font-size: clamp(24px, 3vw, 32px); }
+.signup p { color: var(--muted); margin: 10px 0 0; }
+form.inline { display: flex; gap: 10px; flex-wrap: wrap; }
+.field { flex: 1 1 180px; display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+.field input { font: 400 15px var(--font-body); color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 11px 12px; width: 100%; }
+.field input:focus { border-color: var(--teal); outline: none; }
+form.inline .btn { align-self: end; }
+.socials { display: flex; gap: 10px; margin-top: 18px; }
+.socials a { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--border); color: var(--text); }
+.socials a:hover { border-color: var(--teal); color: var(--teal-ink); }
+.note { font-size: 13px; color: var(--muted); margin-top: 10px; }
+.ok { color: var(--text); font-weight: 600; }
+.todo { border: 1px dashed var(--teal); border-radius: 8px; padding: 10px 12px; font-size: 12.5px; color: var(--muted); margin-top: 10px; }
+@media (max-width: 820px) { .signup { grid-template-columns: 1fr; padding: 26px; } }
+
+/* 07 CTA */
+.cta .wrap { display: flex; justify-content: space-between; gap: 28px; align-items: center; flex-wrap: wrap; }
+.cta h2 { font-size: clamp(26px, 3.4vw, 40px); max-width: 22ch; }
+.cta p { color: var(--on-dark-muted); margin: 12px 0 0; }
+
+/* Footer: same as the site footer */
+footer { background: var(--dark); color: var(--on-dark); padding-block: 56px 28px; }
+.foot-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid var(--border-dark); }
+@media (max-width: 860px) { .foot-top { grid-template-columns: 1fr 1fr; } }
+.foot-brand { font-family: var(--font-head); font-weight: 800; font-size: 15px; letter-spacing: .04em; }
+.foot-tag { margin: 10px 0 0; color: var(--on-dark-muted); font-size: 13.5px; }
+.foot-col h5 { font-family: var(--font-head); font-size: 13px; color: var(--on-dark); margin-bottom: 14px; }
+.foot-col ul { list-style: none; margin: 0; padding: 0; }
+.foot-col li { margin-bottom: 9px; font-size: 13.5px; color: var(--on-dark-muted); }
+.foot-col a { font-size: 13.5px; color: var(--on-dark-muted); text-decoration: none; }
+.foot-col a:hover { color: var(--on-dark); }
+footer .socials a { border-color: var(--border-dark); color: var(--on-dark); width: 36px; height: 36px; }
+footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
+.foot-bottom { display: flex; flex-wrap: wrap; gap: 10px 20px; justify-content: space-between; padding-top: 22px; font-size: 12.5px; color: var(--on-dark-muted); }
+.foot-bottom a { text-decoration: none; color: var(--on-dark-muted); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html#top">AXIA ANALYTICS</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#capabilities">Solutions</a></li>
+      <li><a href="index.html#industries">Industries</a></li>
+      <li><a href="index.html#work">Our Work</a></li>
+      <li><a href="resources.html" aria-current="page">Resources</a></li>
+      <li><a href="ai-readiness.html">AI Readiness</a></li>
+    </ul>
+    <a class="btn btn-primary nav-cta" href="index.html#contact">Start a Conversation <span>→</span></a>
+    <button class="nav-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+  </div>
+  <nav id="mobile-menu" aria-label="Mobile">
+    <a href="index.html#about">About</a>
+    <a href="index.html#capabilities">Solutions</a>
+    <a href="index.html#industries">Industries</a>
+    <a href="index.html#work">Our Work</a>
+    <a href="resources.html">Resources</a>
+    <a href="ai-readiness.html">AI Readiness</a>
+    <a href="index.html#contact">Start a Conversation →</a>
+  </nav>
+</header>
+
+<main>
+  <!-- 01 Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">01 / Resources</div>
+      <h1>Resources</h1>
+      <p>Free guides, tools and videos on AI, automation and data for African organisations.</p>
+      <div class="hero-row">
+        <label class="search" for="q">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span class="sr">Search resources</span>
+          <input id="q" type="search" placeholder="Search guides, templates, videos…" autocomplete="off">
+        </label>
+        <a class="arrow-link" href="ai-readiness.html">Take the AI Readiness check</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Featured -->
+  <section class="band" id="featured">
+    <div class="wrap">
+      <div class="eyebrow">02 / Featured</div>
+      <div class="featured" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- 03 Free downloads -->
+  <section class="band dark" id="downloads">
+    <div class="wrap">
+      <div class="eyebrow">03 / Free downloads</div>
+      <div class="section-head">
+        <div>
+          <h2>Checklists, templates and playbooks</h2>
+          <p>Practical tools we use with clients. Free, no sign-up needed.</p>
+        </div>
+        <a class="arrow-link" href="#library" data-jump-format="downloads">See all downloads</a>
+      </div>
+      <div class="dl-row" id="dlRow"></div>
+    </div>
+  </section>
+
+  <!-- 04 Library -->
+  <section class="band" id="library">
+    <div class="wrap">
+      <div class="eyebrow">04 / Library</div>
+      <div class="filters">
+        <div class="row">
+          <div class="tabs" role="tablist" aria-label="Format" id="tabs">
+            <button role="tab" data-format="all" aria-selected="true">All</button>
+            <button role="tab" data-format="articles" aria-selected="false">Articles</button>
+            <button role="tab" data-format="downloads" aria-selected="false">Downloads</button>
+            <button role="tab" data-format="videos" aria-selected="false">Videos</button>
+            <button role="tab" data-format="shorts" aria-selected="false">Shorts</button>
+          </div>
+          <button class="btn btn-line filter-btn" id="filterBtn" aria-controls="sheet" aria-expanded="false">Filters <span id="filterCount"></span></button>
+        </div>
+        <div class="sheet" id="sheet">
+          <button class="btn btn-plain sheet-close" id="sheetClose">Done</button>
+          <div class="row">
+            <div class="chips" id="chips" aria-label="Topics"></div>
+            <div class="selects">
+              <label for="industry">Industry
+                <select id="industry"><option value="all">All sectors</option></select>
+              </label>
+              <label for="sort">Sort
+                <select id="sort"><option value="newest">Newest</option><option value="popular">Most popular</option></select>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="count" id="count" aria-live="polite"></div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden>
+        <p>Nothing here yet.</p>
+        <button id="reset">Reset filters</button>
+      </div>
+      <div class="more"><button class="btn btn-line" id="loadMore">Load more</button></div>
+    </div>
+  </section>
+
+  <!-- 05 Short videos -->
+  <section class="band" id="shorts" style="padding-top:16px">
+    <div class="wrap">
+      <div class="eyebrow">05 / Short videos</div>
+      <div class="section-head"><h2>Quick takes on AI at work</h2></div>
+      <div class="shorts" id="shortsRow"></div>
+      <div class="follow">
+        <a class="btn btn-primary" href="https://www.tiktok.com/@sharonmaganga_ke" target="_blank" rel="noopener">Follow on TikTok</a>
+        <a class="btn btn-line" href="https://www.instagram.com/sharon.maganga" target="_blank" rel="noopener">Follow on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Stay in the loop -->
+  <section class="band" id="subscribe" style="padding-top:16px">
+    <div class="wrap">
+      <div class="signup">
+        <div>
+          <div class="eyebrow">06 / Stay in the loop</div>
+          <h2>New guides and videos, once a month</h2>
+          <p>Practical AI and automation ideas for African organisations. No spam.</p>
+          <div class="socials" data-socials></div>
+        </div>
+        <div>
+          <form class="inline" id="signupForm" novalidate>
+            <div class="field"><label for="s-name">Name</label><input id="s-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" autocomplete="email" required></div>
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </form>
+          <div class="note" id="signupMsg"></div>
+          <!-- EMAIL TOOL PLACEHOLDER: wire submitLead() (in the script below) to Mailchimp / Brevo / Formspree. -->
+          <div class="todo">Placeholder: signups are not sent anywhere yet. Connect an email tool in <code>submitLead()</code>.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 CTA -->
+  <section class="band dark cta">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">07 / Next step</div>
+        <h2>Not sure where to start?</h2>
+        <p>Take the 2-minute AI Readiness check, or talk to us about your data.</p>
+      </div>
+      <div class="row">
+        <a class="btn btn-primary" href="ai-readiness.html">Take the AI Readiness check →</a>
+        <a class="btn btn-ghost" href="index.html#contact">Start a Conversation</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">AXIA ANALYTICS</div>
+        <div style="font-size:13px;color:var(--on-dark-muted);">AI · Data · Automation</div>
+        <p class="foot-tag">Turning data into intelligent action.</p>
+        <div class="socials" data-socials></div>
+      </div>
+      <div class="foot-col"><h5>Solutions</h5><ul>
+        <li><a href="index.html#capabilities">AI Automations</a></li>
+        <li><a href="index.html#capabilities">Text-Based Agents</a></li>
+        <li><a href="index.html#capabilities">Chatbot Specialization</a></li>
+        <li><a href="index.html#capabilities">AI Consulting &amp; Strategy</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Industries</h5><ul>
+        <li><a href="index.html#industries">Financial Services</a></li>
+        <li><a href="index.html#industries">SACCOs &amp; Cooperatives</a></li>
+        <li><a href="index.html#industries">Healthcare</a></li>
+        <li><a href="index.html#industries">Agriculture</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Company</h5><ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">Our Work</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="ai-readiness.html">AI Readiness</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Contact</h5><ul>
+        <li>hello@axiaanalytics.com</li>
+        <li>+254 728 702 495</li>
+        <li><a href="https://linkedin.com/company/AxiaAnalytics" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Axia Analytics. Nairobi, Kenya.</span>
+      <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<!--
+  RESOURCE DATA
+  Every card on this page renders from this list. To add a resource, add one object.
+  Fields follow the inventory columns in the structure doc:
+  id, title, format (article|download|youtube|short), platform, type (downloads: Checklist|Template|Playbook),
+  topics[], industries[], summary (<=140 chars), url, thumbnail, date, duration_or_read_time,
+  gated, featured, popularity, placeholder.
+  All items below are PLACEHOLDERS until the content inventory is done. Delete "placeholder": true when real.
+  On the live site this block can move to /resources.json (see loadResources()).
+-->
+<script type="application/json" id="resource-data">
+[
+  {"id":"g1","title":"AI Simply Explained: a beginner's guide","format":"download","type":"Guide","topics":["careers","strategy"],"industries":[],"summary":"What AI is, the types of AI, models, data, practical uses and the jargon decoded, in plain English.","url":"downloads/AI-Simply-Explained-Sharon-Maganga.pdf","date":"2026-10-03","gated":false,"featured":true,"popularity":100},
+  {"id":"v-ai-beginners","title":"AI for Beginners: a plain-English guide to models, data, agents and jargon","format":"youtube","platform":"youtube","topics":["careers","strategy"],"industries":[],"summary":"The full lesson behind the AI Simply Explained guide. Download the guide to follow along.","url":"https://youtu.be/50RQ1XQgbjU","youtube_id":"50RQ1XQgbjU","thumbnail":"https://i.ytimg.com/vi/50RQ1XQgbjU/hqdefault.jpg","date":"2026-10-02","featured":true,"popularity":99},
+  {"id":"a1","title":"How a SACCO cut loan processing time with AI automation","format":"article","topics":["ai-automation"],"industries":["financial"],"summary":"A step-by-step look at automating loan intake, scoring and member updates.","url":"#","thumbnail":"","date":"2026-09-24","duration_or_read_time":"7 min read","featured":true,"popularity":90,"placeholder":true},
+  {"id":"y1","title":"Build a WhatsApp chatbot for customer support","format":"youtube","platform":"youtube","topics":["agents"],"industries":["retail"],"summary":"Walkthrough of a support bot that answers FAQs and hands off to staff.","url":"https://www.youtube.com/@sharonmaganga","youtube_id":"","thumbnail":"","date":"2026-09-18","duration_or_read_time":"14:32","popularity":80,"placeholder":true},
+  {"id":"d1","title":"AI Readiness Checklist","format":"download","type":"Checklist","topics":["strategy"],"industries":[],"summary":"25 questions to test whether your data, people and processes are ready for AI.","url":"#","date":"2026-09-12","gated":false,"popularity":95,"placeholder":true},
+  {"id":"d2","title":"Process Automation Audit Template","format":"download","type":"Template","topics":["ai-automation","zapier"],"industries":[],"summary":"Spreadsheet to list your workflows and score which to automate first.","url":"#","date":"2026-09-05","gated":false,"popularity":70,"placeholder":true},
+  {"id":"d3","title":"Chatbot Launch Playbook","format":"download","type":"Playbook","topics":["agents"],"industries":["retail"],"summary":"From use case to go-live: scripts, escalation rules and metrics to track.","url":"#","date":"2026-08-28","gated":false,"popularity":60,"placeholder":true},
+  {"id":"d4","title":"Dashboard Requirements Checklist","format":"download","type":"Checklist","topics":["data"],"industries":["healthcare"],"summary":"What to agree before anyone builds a dashboard: KPIs, owners, data sources.","url":"#","date":"2026-08-20","gated":false,"popularity":55,"placeholder":true},
+  {"id":"a2","title":"Voice AI agents: what they can handle on a call today","format":"article","topics":["voice-ai"],"industries":["healthcare"],"summary":"Appointment booking, reminders and triage: where voice agents work and where they don't.","url":"#","date":"2026-09-10","duration_or_read_time":"6 min read","popularity":50,"placeholder":true},
+  {"id":"a3","title":"Connecting M-Pesa, Google Sheets and your CRM with Zapier","format":"article","topics":["zapier"],"industries":["retail"],"summary":"A simple integration pattern that removes daily copy-paste work for SMEs.","url":"#","date":"2026-08-30","duration_or_read_time":"8 min read","popularity":75,"placeholder":true},
+  {"id":"y2","title":"From spreadsheets to a live dashboard in one afternoon","format":"youtube","platform":"youtube","topics":["data"],"industries":["agriculture"],"summary":"Turn cooperative collection data into a dashboard managers check daily.","url":"https://www.youtube.com/@sharonmaganga","youtube_id":"","date":"2026-08-25","duration_or_read_time":"18:05","popularity":45,"placeholder":true},
+  {"id":"a4","title":"Writing an AI strategy your board will approve","format":"article","topics":["strategy"],"industries":["nonprofit","financial"],"summary":"Start with three problems, not a technology list. A one-page template inside.","url":"#","date":"2026-08-14","duration_or_read_time":"9 min read","popularity":65,"placeholder":true},
+  {"id":"g1-web","title":"AI for Beginners: lesson summary","format":"article","topics":["careers"],"industries":[],"summary":"The web version of the AI Simply Explained guide, with examples from a Nairobi bakery to a DJ set.","url":"guides/ai-for-beginners.html","date":"2026-10-03","duration_or_read_time":"8 min read","popularity":98},
+  {"id":"y3","title":"Text-based agents for field teams: a live demo","format":"youtube","platform":"youtube","topics":["agents","ai-automation"],"industries":["energy"],"summary":"Site reports by SMS, summarised and logged automatically.","url":"https://www.youtube.com/@sharonmaganga","youtube_id":"","date":"2026-07-30","duration_or_read_time":"11:47","popularity":40,"placeholder":true},
+  {"id":"a6","title":"Cleaning messy data before you automate anything","format":"article","topics":["data","ai-automation"],"industries":[],"summary":"Five checks that stop automations failing on bad inputs.","url":"#","date":"2026-07-22","duration_or_read_time":"6 min read","popularity":35,"placeholder":true},
+  {"id":"y4","title":"Using AI to rewrite your CV for each application","format":"youtube","platform":"youtube","topics":["careers"],"industries":[],"summary":"A prompt workflow for tailoring your CV without sounding generic.","url":"https://www.youtube.com/@sharonmaganga","youtube_id":"","date":"2026-07-15","duration_or_read_time":"9:20","popularity":88,"placeholder":true},
+  {"id":"s1","title":"3 tasks every SME should automate first","format":"short","platform":"tiktok","topics":["ai-automation"],"industries":["retail"],"url":"https://www.tiktok.com/@sharonmaganga_ke","date":"2026-09-26","popularity":70,"placeholder":true},
+  {"id":"s2","title":"Is your data ready for AI? Ask these 3 questions","format":"short","platform":"instagram","topics":["strategy"],"industries":[],"url":"https://www.instagram.com/sharon.maganga","date":"2026-09-20","popularity":60,"placeholder":true},
+  {"id":"s3","title":"The prompt I use to prep for interviews","format":"short","platform":"tiktok","topics":["careers"],"industries":[],"url":"https://www.tiktok.com/@sharonmaganga_ke","date":"2026-09-14","popularity":90,"placeholder":true},
+  {"id":"s4","title":"What a WhatsApp bot costs to run","format":"short","platform":"instagram","topics":["agents"],"industries":[],"url":"https://www.instagram.com/sharon.maganga","date":"2026-09-08","popularity":50,"placeholder":true},
+  {"id":"s5","title":"Voice AI booking a clinic appointment","format":"short","platform":"tiktok","topics":["voice-ai"],"industries":["healthcare"],"url":"https://www.tiktok.com/@sharonmaganga_ke","date":"2026-09-01","popularity":40,"placeholder":true},
+  {"id":"s6","title":"One Zap that saves 5 hours a week","format":"short","platform":"instagram","topics":["zapier"],"industries":["retail"],"url":"https://www.instagram.com/sharon.maganga","date":"2026-08-25","popularity":55,"placeholder":true}
+]
+</script>
+
+<script>
+(function () {
+  var TOPICS = [
+    ["ai-automation", "AI Automation"], ["agents", "AI Agents & Chatbots"], ["voice-ai", "Voice AI"],
+    ["zapier", "Zapier & Integrations"], ["data", "Data & Dashboards"], ["strategy", "AI Strategy & Readiness"],
+    ["careers", "AI Skills & Careers"]
+  ];
+  var INDUSTRIES = [
+    ["financial", "Financial Services & SACCOs"], ["healthcare", "Healthcare"], ["agriculture", "Agriculture"],
+    ["retail", "Retail & SMEs"], ["energy", "Energy & Construction"], ["nonprofit", "Nonprofit"]
+  ];
+  var FORMAT_TAB = { article: "articles", download: "downloads", youtube: "videos", short: "shorts" };
+  var FORMAT_LABEL = { article: "Article", download: "Download", youtube: "Video", short: "Short" };
+  var SOCIALS = [
+    ["LinkedIn", "https://linkedin.com/company/AxiaAnalytics", '<path d="M6 9v9M6 6v.01M10 18v-5a3 3 0 0 1 6 0v5M10 9v9"/>'],
+    ["YouTube", "https://www.youtube.com/@sharonmaganga", '<rect x="3" y="6" width="18" height="12" rx="4"/><path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor"/>'],
+    ["TikTok", "https://www.tiktok.com/@sharonmaganga_ke", '<path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5M14 4c.5 2.5 2.5 4 5 4"/>'],
+    ["Instagram", "https://www.instagram.com/sharon.maganga", '<rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><path d="M17 7v.01"/>']
+  ];
+  var PAGE = 9;
+  var topicName = Object.fromEntries(TOPICS), industryName = Object.fromEntries(INDUSTRIES);
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+
+  var state = { format: "all", topics: [], industry: "all", sort: "newest", q: "", shown: PAGE };
+  var items = [];
+
+  // On the live site, set window.AXIA_RESOURCES_URL = "/resources.json" to load from a file instead.
+  function loadResources() {
+    var inline = JSON.parse($("resource-data").textContent);
+    if (!window.AXIA_RESOURCES_URL || !window.fetch) return Promise.resolve(inline);
+    return fetch(window.AXIA_RESOURCES_URL).then(function (r) { return r.json(); }).catch(function () { return inline; });
+  }
+
+  /* ---------- EMAIL TOOL PLACEHOLDER ----------
+     Called by the newsletter form with { name, email, source: "newsletter" }.
+     Replace the body with a call to your email tool (Mailchimp, Brevo, Formspree…)
+    . Until then nothing is sent. */
+  function submitLead(data) {
+    return Promise.resolve({ ok: true, placeholder: true });
+  }
+
+  function dateStr(d) { return new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); }
+  function tagsHtml(it) { return (it.topics || []).slice(0, 2).map(function (t) { return '<span class="tag">' + esc(topicName[t]) + "</span>"; }).join(""); }
+  function phHtml(it) { return it.placeholder ? '<span class="ph">Placeholder</span>' : ""; }
+  function thumbHtml(it) {
+    var img = it.thumbnail ? '<img src="' + esc(it.thumbnail) + '" alt="" loading="lazy" onerror="this.remove()">' : "";
+    var inner = it.format === "youtube"
+      ? '<span class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>' + (it.duration_or_read_time ? '<span class="dur">' + esc(it.duration_or_read_time) + "</span>" : "")
+      : '<span class="glyph">' + esc(FORMAT_LABEL[it.format]) + "</span>";
+    return '<div class="thumb">' + img + inner + "</div>";
+  }
+
+  function cardHtml(it) {
+    var meta = '<div class="meta"><span class="fmt">' + esc(it.type || FORMAT_LABEL[it.format]) + "</span>" + tagsHtml(it) + phHtml(it) + "</div>";
+    var foot = it.format === "download" ? "Free download" : [it.duration_or_read_time, dateStr(it.date)].filter(Boolean).join(" · ");
+    var body = thumbHtml(it) + meta + "<h3>" + esc(it.title) + "</h3>" + (it.summary ? "<p>" + esc(it.summary) + "</p>" : "") + '<div class="foot">' + esc(foot) + "</div>";
+    if (it.format === "download") return '<a class="card" href="' + esc(it.url) + '" target="_blank" rel="noopener">' + body + "</a>";
+    if (it.format === "youtube") return '<a class="card" data-yt="' + esc(it.id) + '" href="' + esc(it.url) + '" target="_blank" rel="noopener">' + body + "</a>";
+    return '<a class="card" href="' + esc(it.url) + '"' + (it.format === "short" ? ' target="_blank" rel="noopener"' : "") + ">" + body + "</a>";
+  }
+
+  function renderFeatured() {
+    var f = items.filter(function (i) { return i.featured; }).slice(0, 3);
+    if (!f.length) { $("featured").hidden = true; return; }
+    $("featuredGrid").innerHTML = '<div class="big">' + cardHtml(f[0]) + '</div><div class="side">' + f.slice(1).map(cardHtml).join("") + "</div>";
+  }
+
+  function renderDownloads() {
+    var d = items.filter(function (i) { return i.format === "download"; }).slice(0, 4);
+    $("dlRow").innerHTML = d.map(function (it) {
+      return '<div class="dl"><div class="doc">' + "PDF" + "</div>" +
+        '<div class="meta"><span class="fmt">' + esc(it.type) + "</span>" + phHtml(it) + "</div>" +
+        "<h3>" + esc(it.title) + "</h3><p>" + esc(it.summary) + "</p>" +
+        '<a class="btn btn-primary" href="' + esc(it.url) + '" target="_blank" rel="noopener">Free download →</a></div>';
+    }).join("");
+  }
+
+  function renderShorts() {
+    var s = items.filter(function (i) { return i.format === "short"; });
+    $("shortsRow").innerHTML = s.map(function (it) {
+      var plat = it.platform === "instagram" ? "Instagram" : "TikTok";
+      return '<a class="short" href="' + esc(it.url) + '" target="_blank" rel="noopener"><div class="thumb">' +
+        (it.thumbnail ? '<img src="' + esc(it.thumbnail) + '" alt="" loading="lazy">' : "") +
+        '<span class="plat">' + plat + "</span>" + phHtml(it) + "</div><p>" + esc(it.title) + "</p></a>";
+    }).join("");
+  }
+
+  function matches(it) {
+    if (state.format !== "all" && FORMAT_TAB[it.format] !== state.format) return false;
+    if (state.format === "all" && it.format === "short") return false; // shorts live in section 05
+    if (state.topics.length && !state.topics.some(function (t) { return (it.topics || []).indexOf(t) > -1; })) return false;
+    if (state.industry !== "all" && (it.industries || []).length && it.industries.indexOf(state.industry) < 0) return false;
+    if (state.q) {
+      var hay = (it.title + " " + (it.summary || "")).toLowerCase();
+      if (hay.indexOf(state.q.toLowerCase()) < 0) return false;
+    }
+    return true;
+  }
+
+  function renderLibrary() {
+    var list = items.filter(matches).sort(function (a, b) {
+      return state.sort === "popular" ? (b.popularity || 0) - (a.popularity || 0) : b.date.localeCompare(a.date);
+    });
+    $("grid").innerHTML = list.slice(0, state.shown).map(cardHtml).join("");
+    $("empty").hidden = list.length > 0;
+    $("loadMore").hidden = list.length <= state.shown;
+    $("count").textContent = list.length ? list.length + (list.length === 1 ? " resource" : " resources") : "";
+    var n = state.topics.length + (state.industry !== "all" ? 1 : 0);
+    $("filterCount").textContent = n ? "(" + n + ")" : "";
+    document.querySelectorAll("#tabs button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.format === state.format); });
+    document.querySelectorAll("#chips .chip").forEach(function (c) { c.setAttribute("aria-pressed", state.topics.indexOf(c.dataset.topic) > -1); });
+    $("industry").value = state.industry; $("sort").value = state.sort;
+    if ($("q").value !== state.q) $("q").value = state.q;
+    writeQuery();
+  }
+
+  // Deep links: /resources.html?format=downloads&topic=agents&industry=healthcare&q=chatbot
+  function readQuery() {
+    try {
+      var p = new URLSearchParams(location.search);
+      if (p.get("format")) state.format = p.get("format");
+      if (p.get("topic")) state.topics = p.get("topic").split(",").filter(function (t) { return topicName[t]; });
+      if (p.get("industry") && industryName[p.get("industry")]) state.industry = p.get("industry");
+      if (p.get("sort")) state.sort = p.get("sort");
+      if (p.get("q")) state.q = p.get("q");
+    } catch (e) {}
+  }
+  function writeQuery() {
+    try {
+      var p = new URLSearchParams();
+      if (state.format !== "all") p.set("format", state.format);
+      if (state.topics.length) p.set("topic", state.topics.join(","));
+      if (state.industry !== "all") p.set("industry", state.industry);
+      if (state.sort !== "newest") p.set("sort", state.sort);
+      if (state.q) p.set("q", state.q);
+      var qs = p.toString();
+      history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
+    } catch (e) {}
+  }
+
+  function update(changes) { Object.assign(state, changes, { shown: PAGE }); renderLibrary(); }
+
+  function setupControls() {
+    $("chips").innerHTML = TOPICS.map(function (t) { return '<button class="chip" data-topic="' + t[0] + '" aria-pressed="false">' + esc(t[1]) + "</button>"; }).join("");
+    $("industry").insertAdjacentHTML("beforeend", INDUSTRIES.map(function (i) { return '<option value="' + i[0] + '">' + esc(i[1]) + "</option>"; }).join(""));
+    var socialHtml = SOCIALS.map(function (s) {
+      return '<a href="' + s[1] + '" target="_blank" rel="noopener" aria-label="' + s[0] + '"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + s[2] + "</svg></a>";
+    }).join("");
+    document.querySelectorAll("[data-socials]").forEach(function (el) { el.innerHTML = socialHtml; });
+
+    $("tabs").addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      if (b.dataset.format === "shorts") { $("shorts").scrollIntoView(); }
+      update({ format: b.dataset.format });
+    });
+    $("chips").addEventListener("click", function (e) {
+      var c = e.target.closest(".chip"); if (!c) return;
+      var t = c.dataset.topic, i = state.topics.indexOf(t);
+      var next = state.topics.slice(); if (i > -1) next.splice(i, 1); else next.push(t);
+      update({ topics: next });
+    });
+    $("industry").addEventListener("change", function (e) { update({ industry: e.target.value }); });
+    $("sort").addEventListener("change", function (e) { update({ sort: e.target.value }); });
+    var timer;
+    $("q").addEventListener("input", function (e) {
+      clearTimeout(timer);
+      timer = setTimeout(function () { update({ q: e.target.value.trim() }); }, 150);
+    });
+    $("q").addEventListener("keydown", function (e) { if (e.key === "Enter") $("library").scrollIntoView(); });
+    $("loadMore").addEventListener("click", function () { state.shown += PAGE; renderLibrary(); });
+    $("reset").addEventListener("click", function () { $("q").value = ""; update({ format: "all", topics: [], industry: "all", q: "" }); });
+    document.querySelectorAll("[data-jump-format]").forEach(function (a) {
+      a.addEventListener("click", function () { update({ format: a.dataset.jumpFormat }); });
+    });
+
+    $("filterBtn").addEventListener("click", function () { $("sheet").classList.add("open"); $("filterBtn").setAttribute("aria-expanded", "true"); });
+    $("sheetClose").addEventListener("click", function () { $("sheet").classList.remove("open"); $("filterBtn").setAttribute("aria-expanded", "false"); });
+    $("menuToggle").addEventListener("click", function () {
+      var open = $("mobile-menu").classList.toggle("open"); $("menuToggle").setAttribute("aria-expanded", open);
+    });
+
+    // YouTube: thumbnail first, the player loads only on click (needs youtube_id on the item).
+    document.addEventListener("click", function (e) {
+      var yt = e.target.closest("[data-yt]");
+      if (yt) {
+        var it = items.find(function (i) { return i.id === yt.dataset.yt; });
+        if (it && it.youtube_id && /(^|\.)axiaanalytics\.com$|^$|^localhost$/.test(location.hostname)) {
+          e.preventDefault();
+          var th = yt.querySelector(".thumb");
+          th.innerHTML = '<iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(it.youtube_id) + '?autoplay=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="' + esc(it.title) + '"></iframe>';
+          yt.removeAttribute("href");
+        }
+        return;
+      }
+    });
+
+    $("signupForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = e.target, msg = $("signupMsg");
+      if (!f.name.value.trim() || !/^\S+@\S+\.\S+$/.test(f.email.value)) { msg.textContent = "Enter your name and a valid email address."; return; }
+      submitLead({ name: f.name.value.trim(), email: f.email.value.trim(), source: "newsletter" }).then(function (r) {
+        msg.innerHTML = r.placeholder ? '<span class="ok">Form works.</span> Not sent: no email tool is connected yet.' : '<span class="ok">You\'re subscribed.</span>';
+        if (!r.placeholder) f.reset();
+      });
+    });
+
+  }
+
+
+  readQuery();
+  setupControls();
+  $("yr").textContent = new Date().getFullYear();
+  loadResources().then(function (data) {
+    items = data;
+    renderFeatured(); renderDownloads(); renderShorts(); renderLibrary();
+  });
+})();
+</script>
+
+</body>
+</html>
