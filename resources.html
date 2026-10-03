@@ -136,7 +136,10 @@ header.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 100;
 .dl .fmt { color: var(--accent); }
 .dl h3 { font-size: 18px; }
 .dl p { margin: 0; color: var(--on-dark-muted); font-size: 14.5px; }
-.dl .btn { margin-top: auto; align-self: flex-start; }
+.dl .btn { align-self: flex-start; }
+.dl-actions { margin-top: auto; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.dl-read { color: var(--accent); font-weight: 600; font-size: 14.5px; }
+.dl h3 a:hover { text-decoration: underline !important; }
 @media (max-width: 1000px) {
   .dl-row { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(250px, 78%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
   .dl { scroll-snap-align: start; }
@@ -434,7 +437,7 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
 -->
 <script type="application/json" id="resource-data">
 [
-  {"id":"g1","title":"AI Simply Explained: a beginner's guide","format":"download","type":"Guide","topics":["careers","strategy"],"industries":[],"summary":"What AI is, the types of AI, models, data, practical uses and the jargon decoded, in plain English.","url":"downloads/AI-Simply-Explained-Sharon-Maganga.pdf","date":"2026-10-03","gated":false,"featured":true,"popularity":100},
+  {"id":"g1","title":"AI Simply Explained: a beginner's guide","format":"download","type":"Guide","topics":["careers","strategy"],"industries":[],"summary":"What AI is, the types of AI, models, data, practical uses and the jargon decoded, in plain English.","url":"downloads/AI-Simply-Explained-Sharon-Maganga.pdf","read_url":"guides/ai-for-beginners.html","date":"2026-10-03","gated":false,"featured":true,"popularity":100},
   {"id":"v-ai-beginners","title":"AI for Beginners: a plain-English guide to models, data, agents and jargon","format":"youtube","platform":"youtube","topics":["careers","strategy"],"industries":[],"summary":"The full lesson behind the AI Simply Explained guide. Download the guide to follow along.","url":"https://youtu.be/GPqOS2ypHw0","youtube_id":"GPqOS2ypHw0","thumbnail":"https://i.ytimg.com/vi/GPqOS2ypHw0/hqdefault.jpg","date":"2026-10-02","featured":true,"popularity":99},
   {"id":"a1","title":"How a SACCO cut loan processing time with AI automation","format":"article","topics":["ai-automation"],"industries":["financial"],"summary":"A step-by-step look at automating loan intake, scoring and member updates.","url":"#","thumbnail":"","date":"2026-09-24","duration_or_read_time":"7 min read","featured":true,"popularity":90,"placeholder":true},
   {"id":"y1","title":"Build a WhatsApp chatbot for customer support","format":"youtube","platform":"youtube","topics":["agents"],"industries":["retail"],"summary":"Walkthrough of a support bot that answers FAQs and hands off to staff.","url":"https://www.youtube.com/@sharonmaganga","youtube_id":"","thumbnail":"","date":"2026-09-18","duration_or_read_time":"14:32","popularity":80,"placeholder":true},
@@ -446,7 +449,6 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
   {"id":"a3","title":"Connecting M-Pesa, Google Sheets and your CRM with Zapier","format":"article","topics":["zapier"],"industries":["retail"],"summary":"A simple integration pattern that removes daily copy-paste work for SMEs.","url":"#","date":"2026-08-30","duration_or_read_time":"8 min read","popularity":75,"placeholder":true},
   {"id":"y2","title":"From spreadsheets to a live dashboard in one afternoon","format":"youtube","platform":"youtube","topics":["data"],"industries":["agriculture"],"summary":"Turn cooperative collection data into a dashboard managers check daily.","url":"https://www.youtube.com/@sharonmaganga","youtube_id":"","date":"2026-08-25","duration_or_read_time":"18:05","popularity":45,"placeholder":true},
   {"id":"a4","title":"Writing an AI strategy your board will approve","format":"article","topics":["strategy"],"industries":["nonprofit","financial"],"summary":"Start with three problems, not a technology list. A one-page template inside.","url":"#","date":"2026-08-14","duration_or_read_time":"9 min read","popularity":65,"placeholder":true},
-  {"id":"g1-web","title":"AI for Beginners: lesson summary","format":"article","topics":["careers"],"industries":[],"summary":"The web version of the AI Simply Explained guide, with examples from a Nairobi bakery to a DJ set.","url":"guides/ai-for-beginners.html","date":"2026-10-03","duration_or_read_time":"8 min read","popularity":98},
   {"id":"y3","title":"Text-based agents for field teams: a live demo","format":"youtube","platform":"youtube","topics":["agents","ai-automation"],"industries":["energy"],"summary":"Site reports by SMS, summarised and logged automatically.","url":"https://www.youtube.com/@sharonmaganga","youtube_id":"","date":"2026-07-30","duration_or_read_time":"11:47","popularity":40,"placeholder":true},
   {"id":"a6","title":"Cleaning messy data before you automate anything","format":"article","topics":["data","ai-automation"],"industries":[],"summary":"Five checks that stop automations failing on bad inputs.","url":"#","date":"2026-07-22","duration_or_read_time":"6 min read","popularity":35,"placeholder":true},
   {"id":"y4","title":"Using AI to rewrite your CV for each application","format":"youtube","platform":"youtube","topics":["careers"],"industries":[],"summary":"A prompt workflow for tailoring your CV without sounding generic.","url":"https://www.youtube.com/@sharonmaganga","youtube_id":"","date":"2026-07-15","duration_or_read_time":"9:20","popularity":88,"placeholder":true},
@@ -514,9 +516,12 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
 
   function cardHtml(it) {
     var meta = '<div class="meta"><span class="fmt">' + esc(it.type || FORMAT_LABEL[it.format]) + "</span>" + tagsHtml(it) + phHtml(it) + "</div>";
-    var foot = it.format === "download" ? "Free download" : [it.duration_or_read_time, dateStr(it.date)].filter(Boolean).join(" · ");
+    var foot = it.format === "download" ? (it.read_url ? "Read online · Free PDF" : "Free download") : [it.duration_or_read_time, dateStr(it.date)].filter(Boolean).join(" · ");
     var body = thumbHtml(it) + meta + "<h3>" + esc(it.title) + "</h3>" + (it.summary ? "<p>" + esc(it.summary) + "</p>" : "") + '<div class="foot">' + esc(foot) + "</div>";
-    if (it.format === "download") return '<a class="card" href="' + esc(it.url) + '" target="_blank" rel="noopener">' + body + "</a>";
+    // Downloads with a web version open it; the PDF itself downloads from the Free downloads band.
+    if (it.format === "download") return it.read_url
+      ? '<a class="card" href="' + esc(it.read_url) + '">' + body + "</a>"
+      : '<a class="card" href="' + esc(it.url) + '" download>' + body + "</a>";
     if (it.format === "youtube") return '<a class="card" data-yt="' + esc(it.id) + '" href="' + esc(it.url) + '" target="_blank" rel="noopener">' + body + "</a>";
     return '<a class="card" href="' + esc(it.url) + '"' + (it.format === "short" ? ' target="_blank" rel="noopener"' : "") + ">" + body + "</a>";
   }
@@ -532,8 +537,9 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
     $("dlRow").innerHTML = d.map(function (it) {
       return '<div class="dl"><div class="doc">' + "PDF" + "</div>" +
         '<div class="meta"><span class="fmt">' + esc(it.type) + "</span>" + phHtml(it) + "</div>" +
-        "<h3>" + esc(it.title) + "</h3><p>" + esc(it.summary) + "</p>" +
-        '<a class="btn btn-primary" href="' + esc(it.url) + '" target="_blank" rel="noopener">Free download →</a></div>';
+        "<h3>" + (it.read_url ? '<a href="' + esc(it.read_url) + '" style="text-decoration:none">' + esc(it.title) + "</a>" : esc(it.title)) + "</h3><p>" + esc(it.summary) + "</p>" +
+        '<div class="dl-actions"><a class="btn btn-primary" href="' + esc(it.url) + '" download>Download PDF →</a>' +
+        (it.read_url ? '<a class="dl-read" href="' + esc(it.read_url) + '">Read online</a>' : "") + "</div></div>";
     }).join("");
   }
 
