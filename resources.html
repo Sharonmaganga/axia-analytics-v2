@@ -359,7 +359,7 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
           <form class="inline" id="signupForm" novalidate>
             <div class="field"><label for="s-name">Name</label><input id="s-name" name="name" autocomplete="name" required></div>
             <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" autocomplete="email" required></div>
-            <input type="text" name="_honey" id="s-honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+            <input type="text" name="_honey" id="s-honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
             <button class="btn btn-primary" type="submit">Subscribe</button>
           </form>
           <div class="note" id="signupMsg" aria-live="polite"></div>
@@ -487,11 +487,12 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({
         name: data.name, email: data.email, source: data.source, page: location.href,
-        _subject: "New newsletter signup: " + data.name, _template: "table", _replyto: data.email
+        _subject: "New newsletter signup: " + data.name, _template: "table", _replyto: data.email,
+        _honey: data.honey // FormSubmit drops submissions where this spam-trap field is filled
       })
     }).then(function (r) { return r.json(); }).then(function (j) {
-      return { ok: String(j.success) === "true" };
-    }).catch(function () { return { ok: false }; });
+      return { ok: String(j.success) === "true", message: j.message || "" };
+    }).catch(function () { return { ok: false, message: "" }; });
   }
 
   function dateStr(d) { return new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); }
@@ -659,12 +660,12 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
       e.preventDefault();
       var f = e.target, msg = $("signupMsg");
       if (!f.name.value.trim() || !/^\S+@\S+\.\S+$/.test(f.email.value)) { msg.textContent = "Enter your name and a valid email address."; return; }
-      if (f._honey.value) return; // spam bots fill the hidden field
       var btn = f.querySelector("button[type=submit]");
       btn.disabled = true; msg.textContent = "Signing you up…";
-      submitLead({ name: f.name.value.trim(), email: f.email.value.trim(), source: "newsletter" }).then(function (r) {
+      submitLead({ name: f.name.value.trim(), email: f.email.value.trim(), source: "newsletter", honey: f._honey.value }).then(function (r) {
         btn.disabled = false;
         if (r.ok) { msg.innerHTML = '<span class="ok">You\'re on the list.</span> The next guide will come to your inbox.'; f.reset(); }
+        else if (/activat/i.test(r.message)) msg.textContent = "Almost ready: this form is waiting to be activated. Please try again in a little while.";
         else msg.textContent = "We couldn't sign you up just now. Please try again, or email hello@axiaanalytics.com.";
       });
     });
