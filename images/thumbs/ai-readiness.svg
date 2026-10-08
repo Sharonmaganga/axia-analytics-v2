@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="bg" cx="85%" cy="10%" r="120%">
+      <stop offset="0" stop-color="#1D5246"/>
+      <stop offset=".55" stop-color="#0B2F28"/>
+      <stop offset="1" stop-color="#07110F"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <text x="190" y="200" fill="#B8F35A" font-size="26" font-weight="600" letter-spacing="5">INTERACTIVE CHECK</text>
+    <text x="186" y="305" fill="#F5F6F1" font-size="88" font-weight="800" letter-spacing="-2">How AI-ready</text>
+    <text x="186" y="400" fill="#F5F6F1" font-size="88" font-weight="800" letter-spacing="-2">are you?</text>
+  </g>
+  <g transform="translate(190 470)">
+    <rect x="0" y="0" width="150" height="16" rx="8" fill="#B8F35A"/>
+    <rect x="170" y="0" width="150" height="16" rx="8" fill="#B8F35A"/>
+    <rect x="340" y="0" width="150" height="16" rx="8" fill="#B8F35A"/>
+    <rect x="510" y="0" width="150" height="16" rx="8" fill="#F5F6F1" fill-opacity=".18"/>
+    <rect x="680" y="0" width="150" height="16" rx="8" fill="#F5F6F1" fill-opacity=".18"/>
+    <text x="0" y="74" fill="#93A39C" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="30" font-weight="500">5 questions · 2 minutes · score out of 15</text>
+  </g>
+</svg>
