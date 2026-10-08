@@ -359,11 +359,11 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
           <form class="inline" id="signupForm" novalidate>
             <div class="field"><label for="s-name">Name</label><input id="s-name" name="name" autocomplete="name" required></div>
             <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" autocomplete="email" required></div>
+            <input type="text" name="_honey" id="s-honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
             <button class="btn btn-primary" type="submit">Subscribe</button>
           </form>
-          <div class="note" id="signupMsg"></div>
-          <!-- EMAIL TOOL PLACEHOLDER: wire submitLead() (in the script below) to Mailchimp / Brevo / Formspree. -->
-          <div class="todo">Placeholder: signups are not sent anywhere yet. Connect an email tool in <code>submitLead()</code>.</div>
+          <div class="note" id="signupMsg" aria-live="polite"></div>
+          <p class="note">We'll only use your email to send the newsletter. See our <a href="privacy.html">Privacy Policy</a>.</p>
         </div>
       </div>
     </div>
@@ -437,10 +437,10 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
 -->
 <script type="application/json" id="resource-data">
 [
-  {"id": "g-claude-skills", "title": "7 Claude skills that save African businesses real hours", "format": "article", "type": "Guide", "topics": ["ai-automation", "strategy"], "industries": [], "summary": "Five recommended Claude Code skills, checked and explained for business teams, plus two built by Axia.", "url": "guides/claude-skills.html", "date": "2026-10-08", "duration_or_read_time": "8 min read", "featured": true, "popularity": 98},
-  {"id": "g1", "title": "AI Simply Explained: a beginner's guide", "format": "download", "type": "Guide", "topics": ["careers", "strategy"], "industries": [], "summary": "What AI is, the types of AI, models, data, practical uses and the jargon decoded, in plain English.", "url": "downloads/AI-Simply-Explained-Sharon-Maganga.pdf", "read_url": "guides/ai-for-beginners.html", "date": "2026-10-03", "gated": false, "featured": true, "popularity": 100},
+  {"id": "g-claude-skills", "title": "7 Claude skills that save African businesses real hours", "format": "article", "type": "Guide", "topics": ["ai-automation", "strategy"], "industries": [], "summary": "Five recommended Claude Code skills, checked and explained for business teams, plus two built by Axia.", "url": "guides/claude-skills.html", "thumbnail": "images/thumbs/claude-skills.svg", "date": "2026-10-08", "duration_or_read_time": "8 min read", "featured": true, "popularity": 98},
+  {"id": "g1", "title": "AI Simply Explained: a beginner's guide", "format": "download", "type": "Guide", "topics": ["careers", "strategy"], "industries": [], "summary": "What AI is, the types of AI, models, data, practical uses and the jargon decoded, in plain English.", "url": "downloads/AI-Simply-Explained-Sharon-Maganga.pdf", "read_url": "guides/ai-for-beginners.html", "thumbnail": "images/thumbs/ai-simply-explained.svg", "date": "2026-10-03", "gated": false, "featured": true, "popularity": 100},
   {"id": "v-ai-beginners", "title": "AI for Beginners: a plain-English guide to models, data, agents and jargon", "format": "youtube", "platform": "youtube", "topics": ["careers", "strategy"], "industries": [], "summary": "The full lesson behind the AI Simply Explained guide. Download the guide to follow along.", "url": "https://youtu.be/GPqOS2ypHw0", "youtube_id": "GPqOS2ypHw0", "thumbnail": "https://i.ytimg.com/vi/GPqOS2ypHw0/hqdefault.jpg", "date": "2026-10-02", "featured": true, "popularity": 99},
-  {"id": "d1", "title": "AI Readiness Checklist", "format": "article", "type": "Interactive check", "topics": ["strategy"], "industries": [], "summary": "5 questions, 2 minutes: a straight read on whether your data, people and processes are ready for AI.", "url": "ai-readiness.html", "date": "2026-09-12", "duration_or_read_time": "2 min", "popularity": 95}
+  {"id": "d1", "title": "AI Readiness Checklist", "format": "article", "type": "Interactive check", "topics": ["strategy"], "industries": [], "summary": "5 questions, 2 minutes: a straight read on whether your data, people and processes are ready for AI.", "url": "ai-readiness.html", "thumbnail": "images/thumbs/ai-readiness.svg", "date": "2026-09-12", "duration_or_read_time": "2 min", "popularity": 95}
 ]
 </script>
 
@@ -478,12 +478,20 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
     return fetch(window.AXIA_RESOURCES_URL).then(function (r) { return r.json(); }).catch(function () { return inline; });
   }
 
-  /* ---------- EMAIL TOOL PLACEHOLDER ----------
-     Called by the newsletter form with { name, email, source: "newsletter" }.
-     Replace the body with a call to your email tool (Mailchimp, Brevo, Formspree…)
-    . Until then nothing is sent. */
+  /* Newsletter signups are emailed to hello@axiaanalytics.com through FormSubmit (formsubmit.co).
+     The very first submission sends an activation email to that inbox; nothing is delivered until it is confirmed. */
+  var LEAD_ENDPOINT = "https://formsubmit.co/ajax/hello@axiaanalytics.com";
   function submitLead(data) {
-    return Promise.resolve({ ok: true, placeholder: true });
+    return fetch(LEAD_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        name: data.name, email: data.email, source: data.source, page: location.href,
+        _subject: "New newsletter signup: " + data.name, _template: "table", _replyto: data.email
+      })
+    }).then(function (r) { return r.json(); }).then(function (j) {
+      return { ok: String(j.success) === "true" };
+    }).catch(function () { return { ok: false }; });
   }
 
   function dateStr(d) { return new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); }
@@ -493,7 +501,7 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
     var img = it.thumbnail ? '<img src="' + esc(it.thumbnail) + '" alt="" loading="lazy" onerror="this.remove()">' : "";
     var inner = it.format === "youtube"
       ? '<span class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>' + (it.duration_or_read_time ? '<span class="dur">' + esc(it.duration_or_read_time) + "</span>" : "")
-      : '<span class="glyph">' + esc(FORMAT_LABEL[it.format]) + "</span>";
+      : (img ? "" : '<span class="glyph">' + esc(FORMAT_LABEL[it.format]) + "</span>");
     return '<div class="thumb">' + img + inner + "</div>";
   }
 
@@ -651,9 +659,13 @@ footer .socials a:hover { color: var(--accent); border-color: var(--accent); }
       e.preventDefault();
       var f = e.target, msg = $("signupMsg");
       if (!f.name.value.trim() || !/^\S+@\S+\.\S+$/.test(f.email.value)) { msg.textContent = "Enter your name and a valid email address."; return; }
+      if (f._honey.value) return; // spam bots fill the hidden field
+      var btn = f.querySelector("button[type=submit]");
+      btn.disabled = true; msg.textContent = "Signing you up…";
       submitLead({ name: f.name.value.trim(), email: f.email.value.trim(), source: "newsletter" }).then(function (r) {
-        msg.innerHTML = r.placeholder ? '<span class="ok">Form works.</span> Not sent: no email tool is connected yet.' : '<span class="ok">You\'re subscribed.</span>';
-        if (!r.placeholder) f.reset();
+        btn.disabled = false;
+        if (r.ok) { msg.innerHTML = '<span class="ok">You\'re on the list.</span> The next guide will come to your inbox.'; f.reset(); }
+        else msg.textContent = "We couldn't sign you up just now. Please try again, or email hello@axiaanalytics.com.";
       });
     });
 

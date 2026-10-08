@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="bg" cx="85%" cy="10%" r="120%">
+      <stop offset="0" stop-color="#1D5246"/>
+      <stop offset=".55" stop-color="#0B2F28"/>
+      <stop offset="1" stop-color="#07110F"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <text x="190" y="190" fill="#B8F35A" font-size="26" font-weight="600" letter-spacing="5">GUIDE · AI TOOLS</text>
+    <text x="186" y="300" fill="#F5F6F1" font-size="92" font-weight="800" letter-spacing="-2">7 Claude skills</text>
+    <text x="186" y="392" fill="#F5F6F1" font-size="58" font-weight="700" letter-spacing="-1" opacity=".9">for African businesses</text>
+  </g>
+  <g transform="translate(190 450)">
+    <rect width="900" height="150" rx="16" fill="#07110F" stroke="#F5F6F1" stroke-opacity=".14"/>
+    <circle cx="30" cy="28" r="7" fill="#B8F35A"/>
+    <circle cx="54" cy="28" r="7" fill="#4FA89A"/>
+    <circle cx="78" cy="28" r="7" fill="#93A39C"/>
+    <g font-family="Consolas, ui-monospace, monospace" font-size="27">
+      <text x="30" y="88" fill="#93A39C">&gt; <tspan fill="#F5F6F1">/plugin install</tspan> <tspan fill="#B8F35A">axia-skills</tspan></text>
+      <text x="30" y="128" fill="#4FA89A">✓ 5 recommended · 2 built by Axia</text>
+    </g>
+  </g>
+</svg>
