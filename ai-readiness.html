@@ -98,6 +98,23 @@
     .card h1{font-size:22px;}
     .result-score{font-size:48px;}
   }
+
+  .form-h{font-size:20px;color:var(--on-dark);margin:8px 0 6px;}
+  .form-sub{color:var(--on-dark-muted);font-size:14px;margin-bottom:18px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
+  @media (max-width:600px){ .grid2{grid-template-columns:1fr;} }
+  .grid2 .full{grid-column:1/-1;}
+  #leadForm label,#leadForm .lbl{display:block;font-size:13px;font-weight:600;color:var(--on-dark);margin-bottom:5px;}
+  #leadForm input[type=text],#leadForm input[type=email],#leadForm input:not([type]),#leadForm select,#leadForm textarea{width:100%;padding:11px 12px;border-radius:9px;border:1px solid var(--border-dark);background:rgba(245,246,241,.06);color:var(--on-dark);font:inherit;font-size:15px;}
+  #leadForm select option{color:#101816;}
+  #leadForm input:focus,#leadForm select:focus,#leadForm textarea:focus{outline:2px solid var(--accent);border-color:transparent;}
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;}
+  @media (max-width:600px){ .checks{grid-template-columns:1fr;} }
+  .checks label{font-weight:400;display:flex;gap:8px;align-items:center;margin:0;}
+  .consent{display:flex;gap:10px;align-items:flex-start;}
+  .consent label{font-weight:400;font-size:13.5px;color:var(--on-dark-muted);margin:0;}
+  .consent a{color:var(--accent);}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
 </style>
 </head>
 <body>
@@ -123,7 +140,7 @@
 
     <div id="intro">
       <h1>How ready is your organisation to actually use AI?</h1>
-      <p class="sub">5 questions. 2 minutes. A blunt read on where you stand — not a sales pitch.</p>
+      <p class="sub">Free. 5 questions, 2 minutes, a blunt read on where you stand, and a short report to your email. Not a sales pitch.</p>
       <button class="btn btn-primary" onclick="startQuiz()">Start assessment</button>
     </div>
 
@@ -143,7 +160,48 @@
       <div class="result-score" id="scoreNum">0/15</div>
       <div class="result-band" id="scoreBand"></div>
       <p class="result-desc" id="scoreDesc"></p>
-      <a class="btn btn-primary" id="ctaLink" href="mailto:hello@axiaanalytics.com?subject=AI%20Readiness%20Assessment%20-%20Book%20a%20call">Book a 20-min readiness call</a>
+
+      <form id="leadForm" novalidate>
+        <h2 class="form-h">Get your full report by email, free</h2>
+        <p class="form-sub">We will send your score, what each of your answers tells us, and the first steps we suggest for your organisation.</p>
+        <div class="hp" aria-hidden="true"><label for="lf-hp">Leave this empty</label><input id="lf-hp" name="company_website" tabindex="-1" autocomplete="off"></div>
+        <div class="grid2">
+          <div><label for="lf-name">Name *</label><input id="lf-name" name="name" required autocomplete="name"></div>
+          <div><label for="lf-email">Work email *</label><input id="lf-email" name="email" type="email" required autocomplete="email"></div>
+          <div><label for="lf-org">Organisation *</label><input id="lf-org" name="org" required autocomplete="organization"></div>
+          <div><label for="lf-role">Your role *</label><input id="lf-role" name="role" required placeholder="For example CEO or Finance Manager"></div>
+          <div><label for="lf-industry">Industry *</label>
+            <select id="lf-industry" name="industry" required>
+              <option value="">Choose one</option>
+              <option>SACCO or financial co-operative</option><option>Bank or microfinance</option><option>Retail or FMCG</option><option>Healthcare</option><option>Agriculture</option><option>Education</option><option>NGO or development</option><option>Construction or manufacturing</option><option>Professional services</option><option>Public sector or county</option><option>Other</option>
+            </select></div>
+          <div><label for="lf-size">Team size *</label>
+            <select id="lf-size" name="size" required>
+              <option value="">Choose one</option><option>1 to 10</option><option>11 to 50</option><option>51 to 200</option><option>201 to 1,000</option><option>More than 1,000</option>
+            </select></div>
+          <div class="full"><label for="lf-time">Which task takes your team the most time? *</label><textarea id="lf-time" name="timewaster" rows="3" required placeholder="For example month-end reports, answering the same member questions, chasing leads"></textarea></div>
+          <div class="full"><span class="lbl">Tools your team uses every day</span>
+            <div class="checks">
+              <label><input type="checkbox" name="tools" value="Microsoft 365"> Microsoft 365</label>
+              <label><input type="checkbox" name="tools" value="Google Workspace"> Google Workspace</label>
+              <label><input type="checkbox" name="tools" value="WhatsApp"> WhatsApp</label>
+              <label><input type="checkbox" name="tools" value="Excel or spreadsheets"> Excel or spreadsheets</label>
+              <label><input type="checkbox" name="tools" value="Accounting or ERP software"> Accounting or ERP software</label>
+              <label><input type="checkbox" name="tools" value="CRM"> CRM</label>
+            </div></div>
+          <div class="full"><label for="lf-start">When would you like to start?</label>
+            <select id="lf-start" name="start"><option>Just exploring</option><option>Next quarter</option><option>This quarter</option></select></div>
+          <div class="full consent"><input type="checkbox" id="lf-consent" name="consent" value="yes" required><label for="lf-consent">Yes, email me my report and occasional practical AI tips from Axia Analytics. I can unsubscribe at any time. See the <a href="privacy.html">Privacy Policy</a>.</label></div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="leadBtn">Email me my report</button>
+      </form>
+
+      <div id="thanks" class="hidden">
+        <h2 class="form-h">Done. Check your inbox.</h2>
+        <p class="result-desc" id="thanksMsg">Your report is on its way. It can take a few minutes and may land in spam or promotions.</p>
+        <a class="btn btn-primary" href="index.html#pricing">See the AI Strategy &amp; Adoption Program</a>
+        <p style="margin-top:18px;"><a class="back-link" href="resources.html">Or browse the free guides</a></p>
+      </div>
     </div>
   </div>
 </main>
@@ -186,6 +244,7 @@
   </div>
 </footer>
 
+<script src="config.js"></script>
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -305,14 +364,48 @@ function showResults(){
     subject = "Building%20momentum";
   } else {
     band = "Ready to move";
-    desc = "You have the data, the ownership, and the appetite. The risk now is picking the wrong first project. A short scoping engagement gets you to the right one fast.";
+    desc = "You have the data, the ownership, and the appetite. The risk now is picking the wrong first project. A short scoping step gets you to the right one fast.";
     subject = "Ready%20to%20move";
   }
   document.getElementById('scoreBand').textContent = band;
   document.getElementById('scoreDesc').textContent = desc;
-  document.getElementById('ctaLink').href =
-    `mailto:hello@axiaanalytics.com?subject=AI%20Readiness%20Assessment%20-%20${subject}%20(${total}/${max})&body=Hi%20Axia%20team%2C%0A%0AI%20just%20completed%20the%20AI%20Readiness%20Assessment%20and%20scored%20${total}/${max}%20(${subject.replace(/%20/g,' ')}).%20I'd%20like%20to%20book%20a%20call.`;
+  window.__readiness = {
+    score: total, max: max, band: band,
+    answers: answers.map(function(a,i){ return questions[i].options[a].v; }).join(','),
+    answerText: answers.map(function(a,i){ return questions[i].q + ' => ' + questions[i].options[a].text; }).join(' | ')
+  };
 }
+
+(function(){
+  var f=document.getElementById('leadForm'); if(!f) return;
+  var btn=document.getElementById('leadBtn'), label=btn.textContent;
+  function done(msg){ f.classList.add('hidden'); document.getElementById('thanksMsg').textContent=msg; document.getElementById('thanks').classList.remove('hidden'); }
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(f);
+    if(d.get('company_website')){ return; }
+    var need=['name','email','org','role','industry','size','timewaster'];
+    for(var i=0;i<need.length;i++){ if(!String(d.get(need[i])||'').trim()){ alert('Please fill in all fields marked with *.'); return; } }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(d.get('email')).trim())){ alert('Please enter a valid email address.'); return; }
+    if(!d.get('consent')){ alert('Please tick the box so we can email you the report.'); return; }
+    var r=window.__readiness||{};
+    var body=new URLSearchParams();
+    d.forEach(function(v,k){ if(k!=='tools') body.append(k,v); });
+    body.append('tools', d.getAll('tools').join(', '));
+    body.append('form','readiness'); body.append('score',r.score); body.append('max',r.max); body.append('band',r.band); body.append('answers',r.answers); body.append('answer_text',r.answerText);
+    btn.disabled=true; btn.textContent='Sending...';
+    var ep=window.AXIA_ENDPOINT;
+    if(ep){
+      fetch(ep,{method:'POST',mode:'no-cors',body:body}).then(function(){
+        done('Your report is on its way to '+d.get('email')+'. It can take a few minutes and may land in spam or promotions.');
+      }).catch(function(){ btn.disabled=false; btn.textContent=label; alert('Sorry, that did not go through. Please email hello@axiaanalytics.com and we will send your report.'); });
+    } else {
+      var text='Please send me my AI readiness report.\n\nScore: '+r.score+'/'+r.max+' ('+r.band+')\nName: '+d.get('name')+'\nEmail: '+d.get('email')+'\nOrganisation: '+d.get('org')+'\nRole: '+d.get('role')+'\nIndustry: '+d.get('industry')+'\nTeam size: '+d.get('size')+'\nMost time-consuming task: '+d.get('timewaster')+'\nTools: '+d.getAll('tools').join(', ')+'\nStart: '+d.get('start')+'\nAnswers: '+r.answerText+'\nI agree to receive my report and occasional tips; I can unsubscribe at any time.';
+      window.location.href='mailto:hello@axiaanalytics.com?subject='+encodeURIComponent('AI readiness report request ('+r.score+'/'+r.max+')')+'&body='+encodeURIComponent(text);
+      done('Your email app should open with your request ready to send. Press send and we will email your report.');
+    }
+  });
+})();
 </script>
 
 </body>
