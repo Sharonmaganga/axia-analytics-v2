@@ -1,0 +1,40 @@
+AXIA ANALYTICS - FREE GUIDE PACK 10
+RUN A 30-DAY AI PILOT AND PROVE ROI TO YOUR BOSS
+============================================================
+Tools: Any of the tools in these guides
+Time: 30 days, about 15 minutes a week to manage
+You will measure: Hours saved per person per week
+
+WHAT YOU NEED
+  - One workflow and 3 to 5 volunteers
+  - A baseline measurement for that workflow
+  - A simple tracker for hours saved
+
+CHECKLIST
+  [ ] 1. Choose one workflow: Pick a repeated task with clear before-and-after time, such as a weekly report or meeting follow-ups.
+  [ ] 2. Measure the baseline: For one week, record how long the task takes and how many times it happens.
+  [ ] 3. Run a 15-minute kickoff: Show the volunteers the guide and the prompts. Agree what they will record.
+  [ ] 4. Check in weekly: Spend 15 minutes each week on what worked, what failed and the hours saved.
+  [ ] 5. Calculate the result: Use the ROI formula below. Count only time that was actually saved.
+  [ ] 6. Present one page: Result, cost, risks and a clear ask: stop, extend, or scale. Use the prompt below to draft it.
+
+COPY-AND-PASTE PROMPT
+------------------------------------------------------------
+Write a one-page summary for [boss's name] of a 30-day AI pilot.
+Data: workflow [name]; [number] people; baseline [hours per person per week]; after pilot [hours per person per week]; tool cost [amount]; issues found [list].
+Include: result, estimated annual value, risks and how we managed them, and a recommendation (stop, extend or scale). Use only the numbers I gave you.
+------------------------------------------------------------
+
+MEASURE YOUR RESULT (run it on 5 real tasks, write the numbers down)
+  Measure                                           Before      After       
+  Baseline hours per person per week                ______      ______      
+  Hours per person per week after 30 days           ______      ______      
+  Number of people in the pilot                     ______      ______      
+
+ROI estimate = (hours saved per person per week x number of people x hourly cost x 4 weeks) minus tool and set-up cost. Use real figures only.
+
+TIPS
+  - A small, honest result beats a big, unproven one.
+  - Report problems too. It builds trust in your numbers.
+
+Want this set up for your team? Discuss your business challenge: axiaanalytics.com  |  hello@axiaanalytics.com  |  +254 728 702 495

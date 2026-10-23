@@ -1,0 +1,37 @@
+AXIA ANALYTICS - FREE GUIDE PACK 07
+NEVER MISS A LEAD: AI FOLLOW-UP WITH ZAPIER OR MAKE
+============================================================
+Tools: Zapier or Make, Google Sheets, Gmail
+Time: 60 to 90 minutes
+You will measure: Lead reply time and reply rate
+
+WHAT YOU NEED
+  - A lead source such as a Google Form or website form
+  - A free Zapier or Make account (free plans have limits)
+  - Gmail and Google Sheets
+
+CHECKLIST
+  [ ] 1. Choose one source: Start with a single form. Add other sources after the first one works.
+  [ ] 2. Build the trigger: In Zapier or Make, create an automation that starts when a new form response arrives.
+  [ ] 3. Log the lead: Add a step that writes the lead into a Google Sheet with the time it arrived.
+  [ ] 4. Draft the reply with AI: Add an AI step using the prompt below and save the result as a Gmail draft. Do not auto-send until you trust it.
+  [ ] 5. Alert yourself: Add a step that sends you an email or message with the lead's details and the draft.
+  [ ] 6. Add a reminder: If the lead has not replied in two days, create a reminder to follow up.
+
+COPY-AND-PASTE PROMPT
+------------------------------------------------------------
+Write a short, friendly reply to this enquiry from [name] at [organisation]: [enquiry text].
+Thank them, restate what they asked for in one line, propose two times for a 20-minute call, and keep it under 90 words. Do not promise prices or dates.
+------------------------------------------------------------
+
+MEASURE YOUR RESULT (run it on 5 real tasks, write the numbers down)
+  Measure                                           Before      After       
+  Average time to reply (before)                    ______      ______      
+  Average time to reply (after)                     ______      ______      
+  Replies received out of 10 leads                  ______      ______      
+
+TIPS
+  - Keep a human in the loop for the first month.
+  - Automations that touch customer data need the same care as any other system.
+
+Want this set up for your team? Discuss your business challenge: axiaanalytics.com  |  hello@axiaanalytics.com  |  +254 728 702 495

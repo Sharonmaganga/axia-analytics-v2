@@ -1,0 +1,40 @@
+AXIA ANALYTICS - FREE GUIDE PACK 09
+THE PROPOSAL GENERATOR: FROM CALL NOTES TO PROPOSAL IN 20 MINUTES
+============================================================
+Tools: Any AI chat tool plus your proposal template
+Time: 20 minutes per proposal
+You will measure: Proposal turnaround time and win rate
+
+WHAT YOU NEED
+  - Your best past proposal with client details removed
+  - Notes from the discovery call
+  - An AI chat tool
+
+CHECKLIST
+  [ ] 1. Build your template: Keep the structure: Problem, Approach, Timeline, Investment, Terms. Remove client details.
+  [ ] 2. Take structured notes on calls: Capture the client's problem, goal, deadline, budget range and decision maker.
+  [ ] 3. Draft with AI: Give the AI your template and your notes using the prompt below.
+  [ ] 4. Fill the numbers yourself: You set prices, dates and terms. Never let the AI decide these.
+  [ ] 5. Edit for fit: Remove generic lines. Add one sentence showing you listened, using the client's own words.
+  [ ] 6. Send it the same day: Export to PDF and send within the hour. Record the outcome so you can calculate your win rate.
+
+COPY-AND-PASTE PROMPT
+------------------------------------------------------------
+Using the proposal template below and my call notes, write a first draft proposal.
+Keep my template's headings. Use the client's own words for the problem.
+Leave prices, dates and legal terms as [TO CONFIRM]. Do not invent facts about the client.
+TEMPLATE: [paste template]
+CALL NOTES: [paste notes]
+------------------------------------------------------------
+
+MEASURE YOUR RESULT (run it on 5 real tasks, write the numbers down)
+  Measure                                           Before      After       
+  Days from call to proposal (before)               ______      ______      
+  Days from call to proposal (after)                ______      ______      
+  Proposals won out of 10 sent                      ______      ______      
+
+TIPS
+  - Win rate needs about 10 proposals before it means anything.
+  - Always read the draft in full before sending.
+
+Want this set up for your team? Discuss your business challenge: axiaanalytics.com  |  hello@axiaanalytics.com  |  +254 728 702 495

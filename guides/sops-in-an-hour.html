@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Write SOPs and training guides in an hour | Axia Analytics</title>
+<meta name="description" content="Talk through a process once and turn it into a clear step-by-step procedure a new person can follow.">
+<link rel="canonical" href="https://axiaanalytics.com/guides/sops-in-an-hour.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Write SOPs and training guides in an hour">
+<meta property="og:description" content="Talk through a process once and turn it into a clear step-by-step procedure a new person can follow.">
+<meta property="og:url" content="https://axiaanalytics.com/guides/sops-in-an-hour.html">
+<meta property="og:image" content="https://axiaanalytics.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --off-white: #F5F3EE;
+    --black: #0B0B0B;
+    --slate: #2F4F4F;
+    --slate-dark: #1C3333;
+    --green: #3DDC84;
+    --green-dark: #1E9E57;
+    --ink: #1A1F1F;
+    --muted: #4F5B5B;
+    --rule: #DAD6CC;
+    --card: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--off-white);
+    color: var(--ink);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    background: radial-gradient(circle at 20% 30%, #3A6363 0%, var(--slate) 50%, var(--slate-dark) 100%);
+    color: var(--off-white);
+    padding: 56px 0 48px;
+  }
+  .kicker {
+    display: inline-block;
+    background: var(--green);
+    color: var(--black);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+  h1 { font-size: clamp(36px, 7vw, 60px); line-height: 1.02; margin: 18px 0 14px; font-weight: 800; }
+  h1 span { color: var(--green); }
+  .lede { font-size: 18px; max-width: 620px; margin: 0; opacity: 0.92; }
+  .byline { margin-top: 22px; font-size: 14px; opacity: 0.85; }
+  .byline strong { color: var(--green); }
+
+  main { padding: 40px 0 24px; }
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+  }
+  .toc h2 { font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; margin: 0 0 8px; color: var(--muted); }
+  .toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 32px; }
+  .toc li { font-weight: 700; break-inside: avoid; }
+  .toc a { color: var(--ink); text-decoration: none; }
+  .toc a:hover { color: var(--green-dark); }
+
+  section { margin: 0 0 34px; }
+  section h2, h3 { break-after: avoid; }
+  .card, .example, .warn, table, tr { break-inside: avoid; }
+  section h2 {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 26px; line-height: 1.2; margin: 0 0 12px; font-weight: 800;
+  }
+  section h2 .num {
+    flex: none;
+    font-size: 14px; color: var(--black); background: var(--green);
+    border-radius: 999px; padding: 3px 11px; letter-spacing: 1px;
+  }
+  h3 { font-size: 17px; margin: 18px 0 6px; font-weight: 800; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 800; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 10px 0 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-left: 6px solid var(--green);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .card h4 { margin: 0 0 4px; font-size: 16px; font-weight: 800; }
+  .card p { margin: 0; font-size: 15px; color: var(--muted); }
+
+  .example {
+    background: #E8EEEC;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+  .example .label { font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--slate); }
+
+  .warn {
+    background: var(--black);
+    color: var(--off-white);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+  .warn strong { color: var(--green); }
+
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; background: var(--card); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; font-size: 15px; }
+  th { background: var(--slate); color: var(--off-white); font-weight: 800; }
+  tr:last-child td { border-bottom: none; }
+  td:first-child { font-weight: 800; white-space: nowrap; }
+
+  .cta {
+    background: radial-gradient(circle at 80% 20%, #3A6363 0%, var(--slate) 55%, var(--slate-dark) 100%);
+    color: var(--off-white);
+    border-radius: 18px;
+    padding: 30px 28px;
+    margin: 40px 0 10px;
+    break-inside: avoid;
+  }
+  .cta h2 { margin: 0 0 8px; font-size: 28px; font-weight: 800; }
+  .cta p { opacity: 0.92; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 800;
+    padding: 12px 22px; border-radius: 999px; font-size: 16px;
+  }
+  .btn.primary { background: var(--green); color: var(--black); }
+  .btn.secondary { border: 2px solid var(--off-white); color: var(--off-white); }
+
+  footer { padding: 24px 0 48px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--slate); font-weight: 700; }
+
+  @media (max-width: 560px) {
+    .toc ol { columns: 1; }
+    td:first-child { white-space: normal; }
+  }
+
+  @page { size: A4; margin: 14mm 0; }
+  @media print {
+    body { font-size: 11.5pt; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    header.hero { padding: 34px 0 30px; }
+    .wrap { max-width: none; padding: 0 16mm; }
+    main { padding-top: 24px; }
+    section h2 { font-size: 20pt; }
+    .cta { margin-top: 20px; }
+    a[href^="http"]::after { content: ""; }
+  }
+
+  a.back { color: var(--green); font-weight: 700; font-size: 14px; text-decoration: none; display: inline-block; margin-bottom: 18px; }
+  a.back:hover { text-decoration: underline; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .chip { border: 1px solid rgba(245,243,238,.35); border-radius: 100px; padding: 5px 12px; font-size: 13px; font-weight: 700; }
+  ul.plain { padding-left: 20px; margin: 8px 0 0; }
+  ul.plain li { margin: 6px 0; }
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 12px 0 0; }
+  ol.steps li { counter-increment: s; position: relative; padding: 16px 0 16px 56px; border-top: 1px solid var(--rule); }
+  ol.steps li:last-child { border-bottom: 1px solid var(--rule); }
+  ol.steps li::before { content: counter(s); position: absolute; left: 0; top: 14px; width: 36px; height: 36px; border-radius: 50%; background: var(--slate); color: var(--green); font-weight: 800; display: flex; align-items: center; justify-content: center; }
+  ol.steps strong { display: block; margin-bottom: 2px; }
+  .promptbox { position: relative; margin-top: 10px; }
+  .promptbox pre { white-space: pre-wrap; word-break: break-word; margin: 0; background: var(--slate-dark); color: var(--off-white); border-radius: 12px; padding: 22px 20px; font-size: 14px; line-height: 1.65; font-family: ui-monospace, Menlo, Consolas, monospace; }
+  .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--green); color: var(--black); border: 0; border-radius: 8px; padding: 6px 12px; font-weight: 800; font-size: 13px; cursor: pointer; font-family: inherit; }
+  .roi { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 16px 18px; margin-top: 16px; }
+  .nextrow { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 36px 0 8px; font-weight: 800; font-size: 15px; }
+  .nextrow a { color: var(--slate); text-decoration: none; }
+  .nextrow a:hover { color: var(--green-dark); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <a class="back" href="../resources.html">&larr; All resources</a><br>
+    <span class="kicker">Free guide 08 &middot; No code</span>
+    <h1>Write SOPs and training guides in an hour</h1>
+    <p class="lede">Talk through a process once and turn it into a clear step-by-step procedure a new person can follow.</p>
+    <div class="chips"><span class="chip">Any AI chat tool plus a screen or voice recording</span><span class="chip">60 minutes per SOP</span><span class="chip">You will measure: Hours per SOP and days to onboard a new person</span></div>
+    <p class="byline">By <strong>Sharon Maganga</strong>, AI Corporate Trainer &middot; Axia Analytics</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section><h2>Who this is for</h2><p>Managers whose processes live in someone&#x27;s head, and who repeat training every time someone joins.</p></section>
+  <section><h2>What you need</h2><ul class="plain"><li>One process you repeat often</li><li>A way to record your voice or screen</li><li>An AI chat tool</li></ul></section>
+  <section><h2>The steps</h2><ol class="steps"><li><strong>Pick one process</strong>Choose something you do weekly, such as processing a request, closing the month or onboarding a customer.</li><li><strong>Record yourself doing it</strong>Narrate each step out loud, including what you check and what can go wrong.</li><li><strong>Transcribe it</strong>Use captions or an AI transcription tool to get the text.</li><li><strong>Turn it into an SOP</strong>Use the prompt below. Review the result for missing steps and wrong order.</li><li><strong>Add screenshots and checks</strong>Add images for the tricky steps and a short checklist at the end.</li><li><strong>Test it with a new person</strong>Ask someone unfamiliar to follow it without your help. Fix every place they get stuck.</li></ol></section>
+  <section><h2>Copy-and-paste prompt</h2>
+    <div class="promptbox"><button class="copy-btn" type="button" data-target="prompt">Copy</button><pre id="prompt">Turn this transcript into a standard operating procedure with: Purpose, Who does it, Tools needed, Numbered steps, Checks before finishing, Common mistakes, and What to do if something goes wrong.
+Use short sentences and plain language. If a step is unclear, list it under &#x27;Questions to confirm&#x27; instead of guessing.</pre></div>
+    <p style="font-size:14px;opacity:.8;">Replace everything in [square brackets] with your own details.</p>
+  </section>
+  <section><h2>Measure your result</h2>
+    <p>Run it on five real tasks. Write down the number before you start and again after. The number is the point.</p>
+    <table><tr><th>Measure</th><th>Before</th><th>After</th></tr><tr><td>Hours to write an SOP the usual way</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Hours with this method</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Days for a new person to work unaided</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+    
+  </section>
+  <section><h2>Tips and cautions</h2><ul class="plain"><li>The test with a new person is the most important step.</li><li>Review SOPs every quarter, because processes change.</li></ul></section>
+  <section><h2>Free download</h2>
+    <p>Take the checklist, prompt and measurement sheet with you as a plain text file.</p>
+    <p><a class="btn secondary" href="../downloads/sops-in-an-hour-pack.txt" download>Download the guide pack (.txt)</a></p>
+  </section>
+
+  <aside class="cta">
+    <h2>Want this set up for your team?</h2>
+    <p>Tell us the workflow. We will tell you whether it can be fixed, how long it takes, and what it should save.</p>
+    <div class="buttons"><a class="btn primary" href="https://axiaanalytics.com/#contact">Discuss your business challenge</a></div>
+  </aside>
+  <div class="nextrow"><a href="never-miss-a-lead.html">&larr; Guide 07</a><a href="proposal-generator.html">Guide 09 &rarr;</a></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    &copy; Axia Analytics &middot; <a href="https://axiaanalytics.com">axiaanalytics.com</a> &middot; <a href="mailto:hello@axiaanalytics.com">hello@axiaanalytics.com</a>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=document.getElementById(b.getAttribute('data-target')).innerText;
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy';},1800);});}
+  });
+});
+</script>
+</body>
+</html>

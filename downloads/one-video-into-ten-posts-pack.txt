@@ -1,0 +1,37 @@
+AXIA ANALYTICS - FREE GUIDE PACK 05
+ONE VIDEO INTO TEN POSTS: THE REPURPOSING MACHINE
+============================================================
+Tools: Any AI chat tool plus your video or voice note
+Time: 60 minutes
+You will measure: Posts produced per hour
+
+WHAT YOU NEED
+  - One 5 to 15 minute video or voice note on a single topic
+  - A transcript (auto captions or an AI transcription tool)
+  - An AI chat tool; your voice assistant from Guide 1 if you built it
+
+CHECKLIST
+  [ ] 1. Record one useful talk: Pick one topic you know well and explain it as if to a client. Aim for 5 to 15 minutes.
+  [ ] 2. Get the transcript: Use your video platform's captions or an AI transcription tool. Fix names and numbers.
+  [ ] 3. Pull out ten distinct points: Use the prompt below. Each point should stand alone.
+  [ ] 4. Choose a format for each: Mix short text posts, a carousel outline, a question, a story and a quote.
+  [ ] 5. Edit in your voice: Rewrite the weak lines. Remove anything you would not say yourself.
+  [ ] 6. Schedule across two weeks: Spread posts out and reuse the best-performing one again next month.
+
+COPY-AND-PASTE PROMPT
+------------------------------------------------------------
+Here is a transcript of me explaining [topic].
+Extract 10 distinct, useful points a [audience] could act on. For each point write: a one-line hook, a 60-word post, and a suggested format (text, carousel, question, story or quote).
+Keep my wording where possible. Do not add facts that are not in the transcript.
+------------------------------------------------------------
+
+MEASURE YOUR RESULT (run it on 5 real tasks, write the numbers down)
+  Measure                                           Before      After       
+  Time to write 5 posts the usual way (minutes)     ______      ______      
+  Time with this method (minutes)                   ______      ______      
+  Posts published this month                        ______      ______      
+
+TIPS
+  - Only publish claims you can back up. Remove any statistic the AI added that is not in your talk.
+
+Want this set up for your team? Discuss your business challenge: axiaanalytics.com  |  hello@axiaanalytics.com  |  +254 728 702 495

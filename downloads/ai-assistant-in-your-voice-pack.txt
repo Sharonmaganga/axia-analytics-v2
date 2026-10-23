@@ -1,0 +1,43 @@
+AXIA ANALYTICS - FREE GUIDE PACK 01
+BUILD YOUR AI ASSISTANT THAT WRITES IN YOUR VOICE
+============================================================
+Tools: ChatGPT Project or Gemini Gem
+Time: 30 minutes
+You will measure: Minutes to draft an email or post, before vs after
+
+WHAT YOU NEED
+  - 5 samples of your best writing (emails, posts or messages)
+  - A ChatGPT account (Projects) or a Google account (Gems)
+  - 30 minutes
+
+CHECKLIST
+  [ ] 1. Collect your samples: Pick 5 pieces that sound like you at your best. Remove client names and private details.
+  [ ] 2. Ask the AI to describe your voice: Paste the samples and ask it to describe your sentence length, tone, favourite phrases and words you never use. Read the answer and correct anything that is wrong.
+  [ ] 3. Create the assistant: In ChatGPT, create a new Project and add instructions and your samples as files. In Gemini, create a new Gem and paste the instructions. Menu names change, so look for Projects or Gems.
+  [ ] 4. Write clear instructions: Use the template below: who you are, who you write for, your voice rules, the format you want, and an instruction to ask you questions when details are missing.
+  [ ] 5. Test it on three real tasks: Draft a real email, a real post and a real reply. Fix what sounds off, then add that fix to the instructions so it sticks.
+  [ ] 6. Use it daily and refine weekly: Every Friday, add one new rule based on what you edited most that week.
+
+COPY-AND-PASTE PROMPT
+------------------------------------------------------------
+You are my writing assistant. You write as me.
+About me: [your role, your organisation, what you do].
+My readers: [who you write to].
+My voice: [for example: plain words, short sentences, warm but direct, no hype, no jargon].
+Never use: [words and phrases you dislike].
+Format: [for example: emails under 120 words; LinkedIn posts with a short hook line].
+Before drafting, ask me up to 2 questions if key details are missing.
+After drafting, list anything you assumed so I can check it.
+------------------------------------------------------------
+
+MEASURE YOUR RESULT (run it on 5 real tasks, write the numbers down)
+  Measure                                           Before      After       
+  Draft a client email                              ______      ______      
+  Draft a social post                               ______      ______      
+  Reply to a routine message                        ______      ______      
+
+TIPS
+  - Add new good examples to the Project every month.
+  - Keep the assistant for drafting. You still read and approve everything before it goes out.
+
+Want this set up for your team? Discuss your business challenge: axiaanalytics.com  |  hello@axiaanalytics.com  |  +254 728 702 495

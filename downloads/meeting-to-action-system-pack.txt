@@ -1,0 +1,41 @@
+AXIA ANALYTICS - FREE GUIDE PACK 02
+THE MEETING-TO-ACTION SYSTEM
+============================================================
+Tools: Copilot in Teams or Gemini in Meet
+Time: 20 minutes to set up
+You will measure: Follow-up time per meeting
+
+WHAT YOU NEED
+  - Microsoft Teams with Copilot, or Google Meet with Gemini notes (availability depends on your plan and your admin's settings)
+  - Permission to record or transcribe meetings
+  - A simple place to track actions (a sheet, Planner or Tasks)
+
+CHECKLIST
+  [ ] 1. Check what your plan includes: Ask your IT admin whether meeting transcription and AI recap are switched on for you. If not, you can still paste a transcript or your own notes into a general AI tool.
+  [ ] 2. Switch on notes before the meeting: Start the transcript or notes feature at the start and tell attendees. Never record without telling people.
+  [ ] 3. Ask for the five things that matter: Right after the meeting, use the prompt below to get decisions, actions, owners, deadlines and open questions.
+  [ ] 4. Send the follow-up within 15 minutes: Paste the result into a short email: what was decided, who does what by when. Read it once before you send.
+  [ ] 5. Log the actions: Copy the actions into your tracker so they live somewhere other than your inbox.
+  [ ] 6. Review weekly: Once a week, paste your action list and ask the AI which items are overdue or have no owner.
+
+COPY-AND-PASTE PROMPT
+------------------------------------------------------------
+From this meeting transcript or notes, produce:
+1. Decisions made (one line each).
+2. Actions: what, owner, due date (write 'no date agreed' if none).
+3. Open questions that need an answer.
+4. A 5-line follow-up email I can send to all attendees.
+Use only what is in the text. If something is unclear, say so instead of guessing.
+------------------------------------------------------------
+
+MEASURE YOUR RESULT (run it on 5 real tasks, write the numbers down)
+  Measure                                           Before      After       
+  Weekly team meeting                               ______      ______      
+  Client call                                       ______      ______      
+  Project check-in                                  ______      ______      
+
+TIPS
+  - Say owners and dates out loud in the meeting. The AI can only capture what was said.
+  - Always check names and dates before sending.
+
+Want this set up for your team? Discuss your business challenge: axiaanalytics.com  |  hello@axiaanalytics.com  |  +254 728 702 495
