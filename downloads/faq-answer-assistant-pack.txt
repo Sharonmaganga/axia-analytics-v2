@@ -1,0 +1,39 @@
+AXIA ANALYTICS - FREE GUIDE PACK 03
+TURN YOUR FAQS INTO A 24/7 ANSWER ASSISTANT, NO CODE
+============================================================
+Tools: ChatGPT Project or Gemini Gem
+Time: 45 minutes
+You will measure: Hours a week answering repeat questions
+
+WHAT YOU NEED
+  - Your 20 to 50 most repeated questions
+  - Approved answers for each, including contacts and opening hours
+  - A ChatGPT account (Projects) or a Google account (Gems)
+
+CHECKLIST
+  [ ] 1. Find the repeat questions: Scroll through the last month of WhatsApp, email and call notes. Note every question you answered more than twice.
+  [ ] 2. Write one approved answer for each: Put them in a single document: question, answer, who to contact if the person needs more. Keep each answer short and checked by someone who knows the policy.
+  [ ] 3. Create the assistant: Create a Project or Gem and upload the document. Add the instructions below so it only answers from your document.
+  [ ] 4. Test with 20 real questions: Ask them in different wording. Mark each answer right, wrong or incomplete, then fix the document, not the assistant.
+  [ ] 5. Give it to your team first: Let staff use it internally for two weeks. This is the safest way to find gaps before any member or customer sees it.
+  [ ] 6. Keep it current: Every week, add the new questions people asked. When you want the same assistant to answer members directly on WhatsApp or your website, that is a build we can do for you.
+
+COPY-AND-PASTE PROMPT
+------------------------------------------------------------
+You answer questions for [organisation name] using ONLY the attached FAQ document.
+If the answer is not in the document, say: 'I do not have that information. Please contact [name / phone / email].'
+Keep answers short and in plain language. Do not guess prices, dates or policies.
+If a question involves a complaint, money or a personal account, tell the person to contact [name / phone].
+------------------------------------------------------------
+
+MEASURE YOUR RESULT (run it on 5 real tasks, write the numbers down)
+  Measure                                           Before      After       
+  Questions answered per week (count)               ______      ______      
+  Minutes spent on each                             ______      ______      
+  Hours per week in total                           ______      ______      
+
+TIPS
+  - Before you paste real member, client or financial data into any AI tool, check your organisation's data policy. While testing, remove names, ID numbers and account numbers.
+  - Fixing the FAQ document improves every future answer.
+
+Want this set up for your team? Discuss your business challenge: axiaanalytics.com  |  hello@axiaanalytics.com  |  +254 728 702 495

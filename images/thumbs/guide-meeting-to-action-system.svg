@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs><radialGradient id="bg" cx="85%" cy="10%" r="120%"><stop offset="0" stop-color="#1D5246"/><stop offset=".55" stop-color="#0B2F28"/><stop offset="1" stop-color="#07110F"/></radialGradient></defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <text x="190" y="200" fill="#B8F35A" font-size="26" font-weight="600" letter-spacing="5">GUIDE 02 · NO CODE</text>
+    <text x="186" y="300" fill="#F5F6F1" font-size="70" font-weight="800" letter-spacing="-1">The meeting-to-action</text><text x="186" y="384" fill="#F5F6F1" font-size="70" font-weight="800" letter-spacing="-1">system</text>
+    <text x="190" y="640" fill="#93A39C" font-size="28" font-weight="500">Follow-up time per meeting</text>
+  </g>
+</svg>

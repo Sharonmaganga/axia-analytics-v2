@@ -1,0 +1,37 @@
+AXIA ANALYTICS - FREE GUIDE PACK 08
+WRITE SOPS AND TRAINING GUIDES IN AN HOUR
+============================================================
+Tools: Any AI chat tool plus a screen or voice recording
+Time: 60 minutes per SOP
+You will measure: Hours per SOP and days to onboard a new person
+
+WHAT YOU NEED
+  - One process you repeat often
+  - A way to record your voice or screen
+  - An AI chat tool
+
+CHECKLIST
+  [ ] 1. Pick one process: Choose something you do weekly, such as processing a request, closing the month or onboarding a customer.
+  [ ] 2. Record yourself doing it: Narrate each step out loud, including what you check and what can go wrong.
+  [ ] 3. Transcribe it: Use captions or an AI transcription tool to get the text.
+  [ ] 4. Turn it into an SOP: Use the prompt below. Review the result for missing steps and wrong order.
+  [ ] 5. Add screenshots and checks: Add images for the tricky steps and a short checklist at the end.
+  [ ] 6. Test it with a new person: Ask someone unfamiliar to follow it without your help. Fix every place they get stuck.
+
+COPY-AND-PASTE PROMPT
+------------------------------------------------------------
+Turn this transcript into a standard operating procedure with: Purpose, Who does it, Tools needed, Numbered steps, Checks before finishing, Common mistakes, and What to do if something goes wrong.
+Use short sentences and plain language. If a step is unclear, list it under 'Questions to confirm' instead of guessing.
+------------------------------------------------------------
+
+MEASURE YOUR RESULT (run it on 5 real tasks, write the numbers down)
+  Measure                                           Before      After       
+  Hours to write an SOP the usual way               ______      ______      
+  Hours with this method                            ______      ______      
+  Days for a new person to work unaided             ______      ______      
+
+TIPS
+  - The test with a new person is the most important step.
+  - Review SOPs every quarter, because processes change.
+
+Want this set up for your team? Discuss your business challenge: axiaanalytics.com  |  hello@axiaanalytics.com  |  +254 728 702 495

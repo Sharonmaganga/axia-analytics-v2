@@ -1,0 +1,37 @@
+AXIA ANALYTICS - FREE GUIDE PACK 06
+INBOX TRIAGE WITH AI
+============================================================
+Tools: Outlook Copilot or Gmail with Gemini
+Time: 30 minutes
+You will measure: Daily email time
+
+WHAT YOU NEED
+  - Outlook with Copilot, or Gmail with Gemini (check your plan)
+  - Folders or labels you are willing to use
+  - A timer
+
+CHECKLIST
+  [ ] 1. Measure your baseline: For three days, note how many minutes you spend in email. You cannot prove improvement without it.
+  [ ] 2. Create four buckets: Act today, Reply this week, Read later, Delete or unsubscribe. Create matching folders or labels.
+  [ ] 3. Summarise before you read: Ask the AI to summarise long threads and unread mail, then decide what deserves your time.
+  [ ] 4. Draft replies, then edit: Use the prompt below for routine replies. Read every draft before sending.
+  [ ] 5. Do an unsubscribe sweep: Spend ten minutes removing the senders you never read.
+  [ ] 6. Limit email to two time slots: Process email twice a day. Turn off constant notifications.
+
+COPY-AND-PASTE PROMPT
+------------------------------------------------------------
+Summarise the emails I received since yesterday into: (1) needs action today, (2) needs a reply this week, (3) for information only.
+For each item that needs a reply, suggest a short draft in a polite, direct tone. Flag anything involving money, contracts or complaints for me to handle personally.
+------------------------------------------------------------
+
+MEASURE YOUR RESULT (run it on 5 real tasks, write the numbers down)
+  Measure                                           Before      After       
+  Minutes in email per day (before)                 ______      ______      
+  Minutes in email per day (after one week)         ______      ______      
+  Emails handled per day                            ______      ______      
+
+TIPS
+  - Never let AI send replies on its own about money, contracts or complaints.
+  - Check that suggested drafts match what you actually agreed.
+
+Want this set up for your team? Discuss your business challenge: axiaanalytics.com  |  hello@axiaanalytics.com  |  +254 728 702 495

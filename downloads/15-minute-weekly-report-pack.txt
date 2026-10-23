@@ -1,0 +1,38 @@
+AXIA ANALYTICS - FREE GUIDE PACK 04
+THE 15-MINUTE WEEKLY REPORT
+============================================================
+Tools: Excel with Copilot or ChatGPT data analysis
+Time: Setup 30 minutes, then 15 weekly
+You will measure: Report time, before vs after
+
+WHAT YOU NEED
+  - A weekly data export in Excel or CSV
+  - Excel with Copilot, or a ChatGPT plan with file analysis
+  - A report template you already send
+
+CHECKLIST
+  [ ] 1. Tidy the export: One table, one header row, no merged cells. Clear column names make the AI far more accurate.
+  [ ] 2. Remove personal data: Delete names, ID numbers and phone numbers you do not need for the report.
+  [ ] 3. Load it into the tool: In Excel, use Copilot on the table if you have it. Otherwise upload the file to ChatGPT and ask it to analyse the data.
+  [ ] 4. Ask for the report in a fixed shape: Use the prompt below so you get the same structure every week.
+  [ ] 5. Check three numbers by hand: Compare a total, a count and one percentage with your source. This takes two minutes and protects you from errors.
+  [ ] 6. Save the routine: Keep the prompt in a note. Next week you export, upload, paste the prompt, check and send.
+
+COPY-AND-PASTE PROMPT
+------------------------------------------------------------
+Analyse this data for the week of [date].
+Give me: (1) a 5-line summary for management, (2) the 3 biggest changes compared with the previous week, (3) any values that look unusual and might be errors, (4) two simple charts that explain the story.
+Show the formulas or steps you used so I can check them. If the data is not enough to answer something, say so.
+------------------------------------------------------------
+
+MEASURE YOUR RESULT (run it on 5 real tasks, write the numbers down)
+  Measure                                           Before      After       
+  Time to build this week's report (minutes)        ______      ______      
+  Time with the AI routine (minutes)                ______      ______      
+  Errors found after sending                        ______      ______      
+
+TIPS
+  - Before you paste real member, client or financial data into any AI tool, check your organisation's data policy. While testing, remove names, ID numbers and account numbers.
+  - AI can mis-add or misread columns. Always verify key numbers before sending.
+
+Want this set up for your team? Discuss your business challenge: axiaanalytics.com  |  hello@axiaanalytics.com  |  +254 728 702 495
