@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Training for Every Role | Axia Analytics</title>
+<meta name="description" content="Role-based AI training for executives, marketers, accountants, customer service and sales teams, built around Microsoft Copilot, with clear rules for keeping member data safe.">
+<link rel="canonical" href="https://axiaanalytics.com/training.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Training for Every Role | Axia Analytics">
+<meta property="og:description" content="Practical, role-based AI training for SACCO and business teams, with safe-use rules for sensitive data.">
+<meta property="og:url" content="https://axiaanalytics.com/training.html">
+<meta property="og:image" content="https://axiaanalytics.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --off-white: #F5F3EE;
+    --black: #0B0B0B;
+    --slate: #2F4F4F;
+    --slate-dark: #1C3333;
+    --green: #3DDC84;
+    --green-dark: #1E9E57;
+    --ink: #1A1F1F;
+    --muted: #4F5B5B;
+    --rule: #DAD6CC;
+    --card: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--off-white);
+    color: var(--ink);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    background: radial-gradient(circle at 20% 30%, #3A6363 0%, var(--slate) 50%, var(--slate-dark) 100%);
+    color: var(--off-white);
+    padding: 56px 0 48px;
+  }
+  .kicker {
+    display: inline-block;
+    background: var(--green);
+    color: var(--black);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+  h1 { font-size: clamp(36px, 7vw, 60px); line-height: 1.02; margin: 18px 0 14px; font-weight: 800; }
+  h1 span { color: var(--green); }
+  .lede { font-size: 18px; max-width: 620px; margin: 0; opacity: 0.92; }
+  .byline { margin-top: 22px; font-size: 14px; opacity: 0.85; }
+  .byline strong { color: var(--green); }
+
+  main { padding: 40px 0 24px; }
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+  }
+  .toc h2 { font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; margin: 0 0 8px; color: var(--muted); }
+  .toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 32px; }
+  .toc li { font-weight: 700; break-inside: avoid; }
+  .toc a { color: var(--ink); text-decoration: none; }
+  .toc a:hover { color: var(--green-dark); }
+
+  section { margin: 0 0 34px; }
+  section h2, h3 { break-after: avoid; }
+  .card, .example, .warn, table, tr { break-inside: avoid; }
+  section h2 {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 26px; line-height: 1.2; margin: 0 0 12px; font-weight: 800;
+  }
+  section h2 .num {
+    flex: none;
+    font-size: 14px; color: var(--black); background: var(--green);
+    border-radius: 999px; padding: 3px 11px; letter-spacing: 1px;
+  }
+  h3 { font-size: 17px; margin: 18px 0 6px; font-weight: 800; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 800; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 10px 0 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-left: 6px solid var(--green);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .card h4 { margin: 0 0 4px; font-size: 16px; font-weight: 800; }
+  .card p { margin: 0; font-size: 15px; color: var(--muted); }
+
+  .example {
+    background: #E8EEEC;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+  .example .label { font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--slate); }
+
+  .warn {
+    background: var(--black);
+    color: var(--off-white);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+  .warn strong { color: var(--green); }
+
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; background: var(--card); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; font-size: 15px; }
+  th { background: var(--slate); color: var(--off-white); font-weight: 800; }
+  tr:last-child td { border-bottom: none; }
+  td:first-child { font-weight: 800; white-space: nowrap; }
+
+  .cta {
+    background: radial-gradient(circle at 80% 20%, #3A6363 0%, var(--slate) 55%, var(--slate-dark) 100%);
+    color: var(--off-white);
+    border-radius: 18px;
+    padding: 30px 28px;
+    margin: 40px 0 10px;
+    break-inside: avoid;
+  }
+  .cta h2 { margin: 0 0 8px; font-size: 28px; font-weight: 800; }
+  .cta p { opacity: 0.92; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 800;
+    padding: 12px 22px; border-radius: 999px; font-size: 16px;
+  }
+  .btn.primary { background: var(--green); color: var(--black); }
+  .btn.secondary { border: 2px solid var(--off-white); color: var(--off-white); }
+
+  footer { padding: 24px 0 48px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--slate); font-weight: 700; }
+
+  @media (max-width: 560px) {
+    .toc ol { columns: 1; }
+    td:first-child { white-space: normal; }
+  }
+
+  @page { size: A4; margin: 14mm 0; }
+  @media print {
+    body { font-size: 11.5pt; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    header.hero { padding: 34px 0 30px; }
+    .wrap { max-width: none; padding: 0 16mm; }
+    main { padding-top: 24px; }
+    section h2 { font-size: 20pt; }
+    .cta { margin-top: 20px; }
+    a[href^="http"]::after { content: ""; }
+  }
+
+  a.back { color: var(--green); font-weight: 700; font-size: 14px; text-decoration: none; display: inline-block; margin-bottom: 18px; }
+  a.back:hover { text-decoration: underline; }
+  .steps4 { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; margin-top: 14px; }
+  @media (max-width: 700px) { .steps4 { grid-template-columns: 1fr; } }
+  .step { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px 20px; }
+  .step b { display: block; color: var(--green-dark); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px; }
+  .track { background: var(--card); border: 1px solid var(--rule); border-radius: 16px; padding: 24px 24px 18px; margin: 18px 0; }
+  .track h3 { margin: 0 0 4px; font-size: 22px; }
+  .track .meta { color: var(--muted); font-size: 14px; margin: 0 0 12px; font-weight: 700; }
+  .track table { margin: 8px 0 14px; }
+  .track .take { margin: 12px 0 0; padding: 12px 14px; background: var(--off-white); border-radius: 10px; font-size: 15px; }
+  .rules { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 14px; }
+  @media (max-width: 700px) { .rules { grid-template-columns: 1fr; } }
+  .rule { border-radius: 12px; padding: 14px 16px; font-size: 15px; border: 1px solid var(--rule); background: var(--card); }
+  .rule b { display: block; margin-bottom: 4px; }
+  .rule.g b { color: #1E9E57; } .rule.a b { color: #B7791F; } .rule.r b { color: #C53030; }
+  .note { font-size: 14px; opacity: .85; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <a class="back" href="index.html">&larr; Axia Analytics</a><br>
+    <span class="kicker">Team AI training</span>
+    <h1>AI training for <span>every role</span> in your team.</h1>
+    <p class="lede">Practical programmes for executives, marketers, accountants, customer service and sales, built around Microsoft Copilot and the tools your team already uses, with clear rules for keeping member data safe.</p>
+    <p class="byline">By <strong>Sharon Maganga</strong>, AI Corporate Trainer &middot; Axia Analytics</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="how">
+    <h2>How every programme works</h2>
+    <div class="steps4">
+      <div class="step"><b>Step 1</b>A 5-lesson foundation on safe AI use: what may be pasted, where, and who checks the answer.</div>
+      <div class="step"><b>Step 2</b>Your role track: hands-on lessons of about 25 minutes, using your team's own tasks.</div>
+      <div class="step"><b>Step 3</b>A capstone project, with the time saved measured before and after.</div>
+      <div class="step"><b>Step 4</b>An Axia Certificate of Completion for each person who finishes.</div>
+    </div>
+    <p class="note">The certificate is issued by Axia Analytics. It is not a Microsoft certification or an accredited qualification.</p>
+  </section>
+
+  <section id="safe">
+    <h2>Keeping your data safe</h2>
+    <p>Every team learns one simple rule before touching real work, and takes home a one-page safe-use card and a template AI use policy for the organisation.</p>
+    <div class="rules">
+      <div class="rule g"><b>Green: public or generic</b>Fine in any approved tool.</div>
+      <div class="rule a"><b>Amber: internal, anonymised</b>Approved tool only, with names, IDs and account numbers removed first.</div>
+      <div class="rule r"><b>Red: personal and confidential</b>Never entered into an AI tool.</div>
+    </div>
+    <p class="note">Every organisation confirms its own rules with its legal adviser or data-protection officer. Kenya's Data Protection Act, 2019 applies to personal data.</p>
+  </section>
+
+  <section id="tracks">
+    <h2>Choose a track</h2>
+    <p>Lesson counts below are the role lessons. Each track also includes the 5-lesson safe-use foundation.</p>
+    <div class="track"><h3>AI for Executives (CEO and Chairman)</h3><p class="meta">24 lessons, plus the 5-lesson safe-use foundation</p><table><tr><th>Module</th><th>Lessons</th><th>What they learn to do</th></tr><tr><td>Copilot for leaders</td><td>4</td><td>Prompt well, draft and decide faster in Outlook and Word</td></tr><tr><td>Meetings to decisions</td><td>5</td><td>Turn Teams meetings into decisions, owners and dates</td></tr><tr><td>Board and committee papers</td><td>5</td><td>Summarise non-confidential papers and prepare sharper questions</td></tr><tr><td>Regulation and market intelligence</td><td>4</td><td>Brief the board on regulator circulars and sector news</td></tr><tr><td>Governing AI: policy, risk, pilot</td><td>6</td><td>Set the rules, run a 30-day pilot and prove the return</td></tr></table><div class="take"><strong>They leave with:</strong> A personal prompt kit, a 30-day AI pilot plan with a return figure, and the SACCO AI use policy ready for board approval.</div></div><div class="track"><h3>AI for Marketers</h3><p class="meta">31 lessons, plus the 5-lesson safe-use foundation</p><table><tr><th>Module</th><th>Lessons</th><th>What they learn to do</th></tr><tr><td>Finding clients: lead research</td><td>6</td><td>Define the ideal member or employer, build lead lists from public business sources, check and enrich them in Excel, and contact only with consent</td></tr><tr><td>Content generation</td><td>6</td><td>Member emails, SMS and social posts in English and Kiswahili; turn one talk into ten posts</td></tr><tr><td>Marketing automation</td><td>6</td><td>Capture enquiries with Forms, send follow-ups, schedule content and run opt-in email sequences, with Power Automate where licensed</td></tr><tr><td>Dashboards that show ROI</td><td>6</td><td>Track cost per lead, enquiries to members and campaign return in Excel or Power BI</td></tr><tr><td>Marketing planners</td><td>4</td><td>Quarterly plan and campaign calendar, including the AGM or ADM campaign</td></tr><tr><td>Brand voice and approvals</td><td>3</td><td>Keep one voice and add a simple approval step</td></tr></table><div class="take"><strong>They leave with:</strong> A target lead list, a content calendar, an automated follow-up flow, and a dashboard that shows what each campaign returned.</div></div><div class="track"><h3>AI for Financial Accountants</h3><p class="meta">32 lessons, plus the 5-lesson safe-use foundation</p><table><tr><th>Module</th><th>Lessons</th><th>What they learn to do</th></tr><tr><td>Copilot Chat for accountants</td><td>3</td><td>Prompts for finance and how to check the answer</td></tr><tr><td>AI for financial analysis</td><td>11</td><td>Variance, trends, loan book and ratio analysis, anomaly spotting, forecasts and scenarios in Excel</td></tr><tr><td>Automating reports and audits</td><td>7</td><td>Month-end packs, reconciliations, audit preparation and an AI-use log</td></tr><tr><td>AI tools for Excel and data</td><td>6</td><td>Formulas, Power Query, PivotTables and dashboards</td></tr><tr><td>Communication with AI</td><td>5</td><td>Explain numbers plainly; draft letters, notices and committee papers</td></tr></table><div class="take"><strong>They leave with:</strong> A finished month-end pack built on anonymised data, 25 tested prompts, and the minutes saved against their usual method.</div></div><div class="track"><h3>AI for Customer Service</h3><p class="meta">29 lessons, plus the 5-lesson safe-use foundation</p><table><tr><th>Module</th><th>Lessons</th><th>What they learn to do</th></tr><tr><td>Faster, kinder replies</td><td>5</td><td>Draft replies in the SACCO&#x27;s tone in Outlook and Teams</td></tr><tr><td>FAQ and knowledge assistant</td><td>6</td><td>Collect approved answers and build an assistant staff can ask</td></tr><tr><td>Member chatbots</td><td>7</td><td>Design what a WhatsApp or website chatbot answers, what it hands to a person, how it verifies members, and how to test and monitor it</td></tr><tr><td>Complaints and triage</td><td>5</td><td>Log, summarise and route complaints with Forms and Planner, with personal details removed</td></tr><tr><td>Call notes and follow-up</td><td>3</td><td>Turn calls into notes and next steps</td></tr><tr><td>Scripts, tone and handover</td><td>3</td><td>Escalation guides and scripts for difficult conversations</td></tr></table><div class="take"><strong>They leave with:</strong> An approved FAQ answer set, a chatbot design ready to build, and a complaint log that shows where problems come from.</div></div><div class="track"><h3>AI for Sales (member recruitment and employer partnerships)</h3><p class="meta">22 lessons, plus the 5-lesson safe-use foundation</p><table><tr><th>Module</th><th>Lessons</th><th>What they learn to do</th></tr><tr><td>Prospecting and research</td><td>4</td><td>Research employers and institutions from public business information</td></tr><tr><td>Follow-ups and proposals</td><td>5</td><td>Draft follow-ups and turn call notes into proposals</td></tr><tr><td>Pipeline and reminders</td><td>6</td><td>Track leads in Excel or Lists and set reminders so none is missed</td></tr><tr><td>Presentations</td><td>4</td><td>Build clear pitch decks in PowerPoint</td></tr><tr><td>Objections and role-play</td><td>3</td><td>Practise the hard questions with AI as the prospect</td></tr></table><div class="take"><strong>They leave with:</strong> A target employer list, a working lead tracker with reminders, and a reusable proposal template.</div></div>
+  </section>
+
+  <section id="tools">
+    <h2>The tools we teach on</h2>
+    <p><strong>Microsoft Copilot Chat</strong> with your work account, <strong>Microsoft 365 Copilot</strong> inside Excel, Word, Outlook and Teams where you have licences, and ChatGPT or Gemini as a fallback with anonymised data. What is included depends on your licences, so we check this with you before we start, and every lesson still runs on the tools you have.</p>
+  </section>
+
+  <aside class="cta">
+    <h2>Want this for your team?</h2>
+    <p>Tell us which roles and what they spend their time on. We will recommend a track, a schedule and the number we will measure.</p>
+    <div class="buttons"><a class="btn primary" href="index.html#contact">Discuss your business challenge</a></div>
+  </aside>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    &copy; Axia Analytics &middot; <a href="https://axiaanalytics.com">axiaanalytics.com</a> &middot; <a href="mailto:hello@axiaanalytics.com">hello@axiaanalytics.com</a>
+  </div>
+</footer>
+</body>
+</html>
