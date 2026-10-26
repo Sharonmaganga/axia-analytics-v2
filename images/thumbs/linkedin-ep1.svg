@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="bg" cx="85%" cy="10%" r="120%">
+      <stop offset="0" stop-color="#1D5246"/>
+      <stop offset=".55" stop-color="#0B2F28"/>
+      <stop offset="1" stop-color="#07110F"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <text x="190" y="190" fill="#B8F35A" font-size="26" font-weight="600" letter-spacing="5">GUIDE · CAREERS · EPISODE 1</text>
+    <text x="186" y="300" fill="#F5F6F1" font-size="92" font-weight="800" letter-spacing="-2">Qualified but invisible?</text>
+    <text x="186" y="392" fill="#F5F6F1" font-size="58" font-weight="700" letter-spacing="-1" opacity=".9">Fix your LinkedIn profile in 5 steps</text>
+  </g>
+  <g transform="translate(190 450)" font-family="Segoe UI, Inter, Arial, sans-serif">
+    <rect width="900" height="150" rx="16" fill="#07110F" stroke="#F5F6F1" stroke-opacity=".14"/>
+    <text x="30" y="62" fill="#93A39C" font-size="27" text-decoration="line-through">Unemployed, seeking opportunities</text>
+    <text x="30" y="112" fill="#F5F6F1" font-size="30" font-weight="700">Data Analyst | SQL · Power BI · Excel</text>
+    <circle cx="850" cy="102" r="20" fill="#B8F35A"/>
+    <path d="m840 102 7 7 13-14" fill="none" stroke="#07110F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
