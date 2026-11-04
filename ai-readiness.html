@@ -395,14 +395,24 @@ function showResults(){
     body.append('form','readiness'); body.append('score',r.score); body.append('max',r.max); body.append('band',r.band); body.append('answers',r.answers); body.append('answer_text',r.answerText);
     btn.disabled=true; btn.textContent='Sending...';
     var ep=window.AXIA_ENDPOINT;
-    if(ep){
-      fetch(ep,{method:'POST',mode:'no-cors',body:body}).then(function(){
-        done('Your report is on its way to '+d.get('email')+'. It can take a few minutes and may land in spam or promotions.');
-      }).catch(function(){ btn.disabled=false; btn.textContent=label; alert('Sorry, that did not go through. Please email hello@axiaanalytics.com and we will send your report.'); });
-    } else {
+    function byEmail(msg){
       var text='Please send me my AI readiness report.\n\nScore: '+r.score+'/'+r.max+' ('+r.band+')\nName: '+d.get('name')+'\nEmail: '+d.get('email')+'\nOrganisation: '+d.get('org')+'\nRole: '+d.get('role')+'\nIndustry: '+d.get('industry')+'\nTeam size: '+d.get('size')+'\nMost time-consuming task: '+d.get('timewaster')+'\nTools: '+d.getAll('tools').join(', ')+'\nStart: '+d.get('start')+'\nAnswers: '+r.answerText+'\nI agree to receive my report and occasional tips; I can unsubscribe at any time.';
       window.location.href='mailto:hello@axiaanalytics.com?subject='+encodeURIComponent('AI readiness report request ('+r.score+'/'+r.max+')')+'&body='+encodeURIComponent(text);
-      done('Your email app should open with your request ready to send. Press send and we will email your report.');
+      done(msg||'Your email app should open with your request ready to send. Press send and we will email your report.');
+    }
+    var failMsg='We could not send your report automatically, so your email app should open with your request ready. Press send and we will email your report. If nothing opens, write to hello@axiaanalytics.com.';
+    if(ep){
+      // Read the script's answer (Apps Script allows cross-origin reads) so a failed send is not shown as a success.
+      fetch(ep,{method:'POST',body:body}).then(function(res){
+        return res.text().then(function(t){
+          var j=null; try{ j=JSON.parse(t); }catch(_){}
+          var failed=!res.ok || (j&&j.ok===false) || (!j && /<title>\s*Error|Exception|TypeError|ReferenceError/i.test(t));
+          if(failed){ byEmail(failMsg); return; }
+          done('Your report is on its way to '+d.get('email')+'. It can take a few minutes and may land in spam or promotions.');
+        });
+      }).catch(function(){ byEmail(failMsg); });
+    } else {
+      byEmail();
     }
   });
 })();
