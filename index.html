@@ -215,6 +215,16 @@
   .client-industry{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--teal-ink);margin-bottom:12px;}
   .client-desc{font-size:15px;color:var(--muted);max-width:44ch;}
 
+  /* toolkits */
+  .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:48px;}
+  @media (max-width:900px){ .pkg-grid{grid-template-columns:1fr;} }
+  .pkg-card{display:flex;flex-direction:column;gap:12px;background:var(--surface);padding:34px 30px;text-decoration:none;color:var(--text);transition:background .2s ease;}
+  .pkg-card:hover{background:#FAFBF7;}
+  .pkg-tag{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--teal-ink);}
+  .pkg-card h3{font-size:22px;}
+  .pkg-card p{font-size:15px;color:var(--muted);flex:1;}
+  .pkg-link{font-weight:600;font-size:15px;color:var(--forest);}
+
   /* process timeline */
   .timeline{display:flex;position:relative;margin-top:64px;}
   .timeline::before{content:"";position:absolute;top:13px;left:0;right:0;height:1px;background:var(--border-dark);}
@@ -345,6 +355,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#capabilities">Solutions</a></li>
+      <li><a href="#toolkits">Toolkits</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#work">Our Work</a></li>
       <li><a href="resources.html">Resources</a></li>
@@ -359,6 +370,7 @@
 <nav id="mobile-menu" aria-label="Mobile">
   <a href="#about">About</a>
   <a href="#capabilities">Solutions</a>
+  <a href="#toolkits">Toolkits</a>
   <a href="#industries">Industries</a>
   <a href="#work">Our Work</a>
   <a href="resources.html">Resources</a>
@@ -721,6 +733,37 @@
   <!-- AFRICA -->
   
 
+  <!-- READY-BUILT TOOLKITS -->
+  <section id="toolkits" style="border-top:1px solid var(--border);">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Ready-built toolkits</div>
+        <h2 style="font-size:clamp(26px,3.6vw,44px);margin-top:16px;max-width:22ch;">Three toolkits, built with real clients and configured for yours.</h2>
+        <p class="muted" style="margin-top:14px;max-width:62ch;">Each one starts with tools your team can use in the first week, then grows into automation and agents once the numbers prove it.</p>
+      </div>
+      <div class="pkg-grid reveal">
+        <a class="pkg-card" href="solutions-sacco-mfi.html">
+          <div class="pkg-tag">SACCOs &amp; microfinance</div>
+          <h3>SACCO &amp; Microfinance Toolkit</h3>
+          <p>Contributions reconciliation, loan portfolio and provisioning, board packs, loan appraisal, payout modelling, a WhatsApp member assistant and data protection compliance.</p>
+          <span class="pkg-link">See the seven tools →</span>
+        </a>
+        <a class="pkg-card" href="solutions-construction.html">
+          <div class="pkg-tag">Contractors</div>
+          <h3>AI Workforce for Contractors</h3>
+          <p>AI employees that answer enquiries, draft quotes, follow up sites and chase payments on calls and WhatsApp, with founders approving prices and dates.</p>
+          <span class="pkg-link">Meet the AI team →</span>
+        </a>
+        <a class="pkg-card" href="solutions-enterprise.html">
+          <div class="pkg-tag">Enterprise</div>
+          <h3>Microsoft AI &amp; Enterprise Agents</h3>
+          <p>Role-based Copilot training, then agents on Copilot Studio and Power Automate: orders into SAP and customer onboarding with approvals.</p>
+          <span class="pkg-link">Plan a pilot →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- CLIENTS SERVED -->
   <section id="work">
     <div class="wrap">
@@ -739,12 +782,12 @@
         <div class="client-card">
           <div class="client-name">Vivo Energy Kenya</div>
           <div class="client-industry">Energy &amp; Fuels</div>
-          <p class="client-desc">Distributor of Shell-branded fuels and lubricants across Kenya.</p>
+          <p class="client-desc">Distributor of Shell-branded fuels and lubricants across Kenya. AI training for staff and order processing into SAP.</p>
         </div>
         <div class="client-card">
           <div class="client-name">StruChem Africa Limited</div>
           <div class="client-industry">Construction &amp; Flooring</div>
-          <p class="client-desc">Nairobi-based flooring and construction contractor.</p>
+          <p class="client-desc">Nairobi-based flooring and construction contractor. AI voice receptionist, quotation generator and job &amp; payment tracker.</p>
         </div>
         <div class="client-card">
           <div class="client-name">One Vision Global Hope Foundation</div>
@@ -1008,6 +1051,9 @@
         <li><a href="#capabilities">Zapier Ecosystems</a></li>
         <li><a href="#capabilities">AI Consulting &amp; Strategy</a></li>
         <li><a href="#capabilities">Voice AI Agents</a></li>
+        <li><a href="solutions-sacco-mfi.html">SACCO &amp; MFI Toolkit</a></li>
+        <li><a href="solutions-construction.html">AI for Contractors</a></li>
+        <li><a href="solutions-enterprise.html">Microsoft AI &amp; Agents</a></li>
       </ul></div>
       <div class="foot-col"><h5>Industries</h5><ul>
         <li><a href="#industries">Financial Services</a></li>
@@ -1104,6 +1150,8 @@
     {name:'Retail & FMCG', problem:'Sales and inventory reporting is backward-looking, not predictive.', ai:'Demand forecasting and customer analytics.', data:'Real-time sales and inventory dashboards.', outcome:'Fewer stockouts, less dead stock.'},
     {name:'Professional Services', problem:'Client and engagement data lives in inboxes and personal spreadsheets.', ai:'Document intelligence and workflow automation.', data:'Centralised engagement reporting.', outcome:'Less admin time, more billable focus.'},
     {name:'SMEs', problem:'No dedicated data function, but the same decisions to make.', ai:'Right-sized automation for repetitive tasks.', data:'A first proper reporting layer.', outcome:'Decisions made on evidence, not instinct.'},
+    {name:'Construction & Contractors', problem:'Enquiries, quotes, site updates and payments chased by founders between site visits.', ai:'AI employees for front desk, quotation, follow-up and collections.', data:'One job record from first enquiry to final payment.', outcome:'Fewer lost enquiries and faster payment.'},
+    {name:'Energy & Distribution', problem:'Orders retyped from emails and photos into the ERP; onboarding stuck in inboxes.', ai:'Order-to-ERP and customer onboarding agents on Microsoft 365.', data:'Product master matching and a full approval log.', outcome:'Orders entered faster, with fewer errors.'},
     {name:'Development & Public Sector', problem:'Impact data collected for donors, rarely used operationally.', ai:'Monitoring & evaluation support tools.', data:'Consolidated programme reporting.', outcome:'Reporting that also improves delivery.'}
   ];
   var indList = document.getElementById('indList');
